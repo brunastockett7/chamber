@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +22,20 @@
   <main>
     <h2>Welcome to the Chamber</h2>
     <p>Supporting local business in Minot, North Dakota.</p>
+
+    <section>
+      <h2>My Course List</h2>
+      <div>
+        <button class="filter-btn" data-subject="All">All</button>
+        <button class="filter-btn" data-subject="General">General</button>
+        <button class="filter-btn" data-subject="Major">Major</button>
+        <button class="filter-btn" data-subject="Elective">Elective</button>
+      </div>
+
+      <div id="course-list" class="course-list"></div>
+
+      <p>Total Credits: <span id="credit-total">0</span></p>
+    </section>
   </main>
 
   <footer>
