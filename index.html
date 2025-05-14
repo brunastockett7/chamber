@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Minot Chamber of Commerce</title>
   <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
   <header>
+    <img src="images/north-dakota-flag.jpg" alt="North Dakota Flag" class="flag-icon">
     <h1>Minot Chamber of Commerce</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
+      <ul aria-label="Main site navigation">
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="discover.html">Discover</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
@@ -19,22 +23,32 @@
     </nav>
   </header>
 
-  <main>
-    <h2>Welcome to the Chamber</h2>
-    <p>Supporting local business in Minot, North Dakota.</p>
+  <main id="mainContent">
+    <section class="hero">
+      <img src="images/minot-downtown.jpg" alt="Downtown Minot" class="hero-img" loading="lazy" />
+      <h2>Welcome to Minot</h2>
+      <p>Connecting local businesses, nature, and community spirit.</p>
+    </section>
 
-    <section>
+    <section class="about">
+      <h2>What We Do</h2>
+      <p>
+        The Minot Chamber of Commerce is a non-profit organization committed to supporting local businesses,
+        promoting economic growth, and building strong community connections in Minot, North Dakota.
+        We provide networking opportunities, training workshops, local events, and resources that help businesses grow and thrive.
+      </p>
+    </section>
+
+    <section class="courses">
       <h2>My Course List</h2>
-      <div>
+      <div class="filters">
         <button class="filter-btn" data-subject="All">All</button>
-        <button class="filter-btn" data-subject="General">General</button>
         <button class="filter-btn" data-subject="Major">Major</button>
+        <button class="filter-btn" data-subject="General">General</button>
         <button class="filter-btn" data-subject="Elective">Elective</button>
       </div>
-
       <div id="course-list" class="course-list"></div>
-
-      <p>Total Credits: <span id="credit-total">0</span></p>
+      <p>Total Credits: <span id="credit-total" aria-live="polite">0</span></p>
     </section>
   </main>
 
@@ -42,6 +56,7 @@
     <p>&copy; <span id="year"></span> Minot Chamber of Commerce | Last Modified: <span id="lastModified"></span></p>
   </footer>
 
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="top-btn" aria-label="Scroll to top">↑ Top</button>
   <script src="scripts/script.js"></script>
 </body>
 </html>

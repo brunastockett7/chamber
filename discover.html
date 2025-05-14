@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Discover - Minot Chamber</title>
+  <title>Discover Minot</title>
   <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <header>
@@ -13,7 +13,7 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="discover.html">Discover</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
       </ul>
@@ -21,14 +21,19 @@
   </header>
 
   <main>
-    <h2>Discover Page (Placeholder)</h2>
-    <p>Content coming soon...</p>
+    <h2>Discover Minot</h2>
+    <p class="intro">
+      As part of our mission to connect and uplift our community, we highlight special places, events, and local gems in Minot.
+    </p>
+    <section class="gallery">
+      <img src="images/oak-park.jpg" alt="Oak Park in Minot" loading="lazy" />
+      <img src="images/concert-park.jpg" alt="Community concert at the park" loading="lazy" />
+    </section>
   </main>
 
   <footer>
     <p>&copy; <span id="year"></span> Minot Chamber of Commerce | Last Modified: <span id="lastModified"></span></p>
   </footer>
-
   <script src="scripts/script.js"></script>
 </body>
 </html>
