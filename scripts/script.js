@@ -1,3 +1,4 @@
+
 // === Course Data ===
 const courses = [
   { code: "CSE110", name: "Intro to Programming", credits: 3, subject: "Major", taken: true },
