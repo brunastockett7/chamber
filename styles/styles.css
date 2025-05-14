@@ -45,10 +45,7 @@ nav a {
   font-weight: 500;
 }
 
-nav a.active {
-  text-decoration: underline;
-}
-
+nav a.active,
 nav a:hover {
   text-decoration: underline;
 }
@@ -143,13 +140,6 @@ nav a:hover {
 
 .course:hover {
   transform: translateY(-3px);
-}
-
-.completed {
-  border-left-color: #66bb6a;
-  background-color: #f1f8e9;
-  text-decoration: line-through;
-  color: #6b6b6b;
 }
 
 /* === Gallery Section === */
