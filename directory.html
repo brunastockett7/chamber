@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
   <header>
     <h1>Minot Chamber of Commerce</h1>
     <nav>
-      <ul>
+      <ul aria-label="Main site navigation">
         <li><a href="index.html">Home</a></li>
         <li><a href="discover.html">Discover</a></li>
         <li><a href="directory.html" class="active">Directory</a></li>
@@ -19,20 +20,30 @@
     </nav>
   </header>
 
-  <main>
-    <h2>Local Member Spotlight</h2>
-    <p class="intro">
-      We spotlight member businesses that help make our community strong. These organizations represent the heart of Minot’s economic growth.
-    </p>
-    <img src="images/minot-daily-bread.jpg" alt="Minot's Daily Bread bakery" />
-    <p>
-      Minot’s Daily Bread is a proud Chamber member. They serve handcrafted baked goods with passion and community spirit every day.
-    </p>
+  <main id="mainContent">
+    <section class="directory-spotlight">
+      <h2>Local Member Spotlight</h2>
+      <p class="intro">
+        We spotlight member businesses that help make our community strong. These organizations represent the heart of Minot’s economic growth.
+      </p>
+
+      <div class="spotlight-card">
+        <img src="images/minot-daily-bread.jpg" alt="Minot's Daily Bread bakery" class="spotlight-img" loading="lazy">
+        <div class="spotlight-description">
+          <p>
+            <strong>Minot’s Daily Bread</strong> is a proud Chamber member. They serve handcrafted baked goods with passion and community spirit every day.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
   </main>
 
   <footer>
     <p>&copy; <span id="year"></span> Minot Chamber of Commerce | Last Modified: <span id="lastModified"></span></p>
   </footer>
+
   <script src="scripts/script.js"></script>
 </body>
 </html>

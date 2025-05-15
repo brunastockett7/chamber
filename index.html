@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minot Chamber of Commerce</title>
-  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
   <a href="#mainContent" class="skip-link">Skip to main content</a>
@@ -25,9 +25,11 @@
 
   <main id="mainContent">
     <section class="hero">
-      <img src="images/minot-downtown.jpg" alt="Downtown Minot" class="hero-img" loading="lazy" />
-      <h2>Welcome to Minot</h2>
-      <p>Connecting local businesses, nature, and community spirit.</p>
+      <img src="images/minot-downtown.jpg" alt="Downtown Minot" class="hero-img" loading="lazy">
+      <div class="hero-text">
+        <h2>Welcome to Minot</h2>
+        <p>Connecting local businesses, nature, and community spirit.</p>
+      </div>
     </section>
 
     <section class="about">
@@ -48,7 +50,7 @@
         <button class="filter-btn" data-subject="Elective">Elective</button>
       </div>
       <div id="course-list" class="course-list"></div>
-      <p>Total Credits: <span id="credit-total" aria-live="polite">0</span></p>
+      <p><strong>Total Credits:</strong> <span id="credit-total" aria-live="polite">0</span></p>
     </section>
   </main>
 
@@ -57,6 +59,7 @@
   </footer>
 
   <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="top-btn" aria-label="Scroll to top">↑ Top</button>
-  <script src="scripts/script.js"></script>
+  <script src="js/courses.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

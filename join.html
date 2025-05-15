@@ -8,10 +8,12 @@
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
   <header>
     <h1>Minot Chamber of Commerce</h1>
     <nav>
-      <ul>
+      <ul aria-label="Main site navigation">
         <li><a href="index.html">Home</a></li>
         <li><a href="discover.html">Discover</a></li>
         <li><a href="directory.html">Directory</a></li>
@@ -20,21 +22,28 @@
     </nav>
   </header>
 
-  <main>
-    <h2>Join Us!</h2>
-    <p>
-      We welcome local businesses, entrepreneurs, and organizations to join the Minot Chamber of Commerce.
-      As a member, you'll gain access to exclusive networking events, local promotion opportunities, and business development resources.
-    </p>
-    <img src="images/handshake.jpg" alt="Business partners shaking hands" loading="lazy" />
-    <p>
-      <a href="#" class="cta-button">Fill Out the Membership Form</a>
-    </p>
+  <main id="mainContent">
+    <section class="join-section">
+      <h2>Join Us!</h2>
+      <p>
+        We welcome local businesses, entrepreneurs, and organizations to join the Minot Chamber of Commerce.
+        As a member, you'll gain access to exclusive networking events, local promotion opportunities, and business development resources.
+      </p>
+
+      <div class="join-highlight">
+        <img src="images/handshake.jpg" alt="Business partners shaking hands" class="join-img" loading="lazy" />
+        <p>
+          Joining is easy and impactful. Take the next step toward growing your business and community presence.
+        </p>
+        <a href="#" class="cta-button">Fill Out the Membership Form</a>
+      </div>
+    </section>
   </main>
 
   <footer>
     <p>&copy; <span id="year"></span> Minot Chamber of Commerce | Last Modified: <span id="lastModified"></span></p>
   </footer>
+
   <script src="scripts/script.js"></script>
 </body>
 </html>
