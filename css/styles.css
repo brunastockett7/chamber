@@ -44,7 +44,17 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  background-color: #cfe3cf;
+  background-color: #f6e8b1; /* pastel yellow */
+}
+
+/* ✅ Hero image styling */
+.hero-img {
+  width: 100%;
+  max-height: 474px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Directory view toggle */
@@ -54,7 +64,7 @@ nav a.active {
 }
 
 .view-toggle button {
-  background-color: #E2C290;
+  background-color: #f6e8b1; /* pastel yellow */
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -65,7 +75,7 @@ nav a.active {
 }
 
 .view-toggle button:hover {
-  background-color: #d4b67b;
+  background-color: #f3dc8b; /* darker pastel yellow */
 }
 
 /* Member container styles */

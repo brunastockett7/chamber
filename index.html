@@ -24,7 +24,7 @@
 
   <main>
     <section class="hero">
-      <img src="images/scandinavian-park.jpg" alt="Scandinavian Park in Minot" class="hero-img" loading="lazy" />
+      <img src="images/minot-downtown.jpg" alt="Scandinavian Park in Minot" class="hero-img" loading="lazy" />
       <div class="hero-text">
         <h2>Building Business. Building Community.</h2>
         <p>Welcome to the heart of Minot — where opportunity meets connection.</p>
@@ -34,8 +34,10 @@
     <section class="about">
       <h2>What We Do</h2>
       <p>
-        The Minot Chamber of Commerce is a non-profit organization committed to supporting local businesses,
-        promoting economic growth, and building strong community connections in Minot, North Dakota.
+        The Minot Chamber of Commerce is more than a business network — it’s a community foundation. We empower local
+        businesses by providing advocacy, visibility, and growth resources tailored to entrepreneurs and companies of all sizes.
+        Our members benefit from mentorship opportunities, professional development events, and strategic connections that drive long-term success. 
+        Whether you're launching a startup or expanding a legacy company, our mission is to help you thrive in Minot's growing economic landscape.
       </p>
     </section>
 
@@ -47,7 +49,7 @@
         <button class="filter-btn" data-subject="General">General</button>
         <button class="filter-btn" data-subject="Elective">Elective</button>
       </div>
-      <div id="course-list" class="course-list"></div>
+      <div id="course-list" class="course-list horizontal"></div>
       <p><strong>Total Credits:</strong> <span id="credit-total" aria-live="polite">0</span></p>
     </section>
   </main>
@@ -56,8 +58,9 @@
     <p>&copy; <span id="year"></span> Minot Chamber of Commerce | Last Modified: <span id="lastModified"></span></p>
   </footer>
 
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="top-btn" aria-label="Scroll to top">↑ Top</button>
+
   <script src="js/courses.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
-
