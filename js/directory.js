@@ -2,36 +2,44 @@ const container = document.getElementById("memberContainer");
 const gridBtn = document.getElementById("gridBtn");
 const listBtn = document.getElementById("listBtn");
 
-// ✅ Load members from correct path
+// ✅ Load and display members
 async function getMembers() {
   try {
-    const response = await fetch("../data/members.json");
-
+    const response = await fetch("../data/members.json"); // adjust path if needed
     if (!response.ok) {
-      throw new Error("Network response was not ok");
+      throw new Error("Failed to fetch member data");
     }
 
     const data = await response.json();
     displayMembers(data);
   } catch (error) {
-    container.innerHTML = "<p>Unable to load members at this time.</p>";
-    console.error("Failed to fetch members:", error);
+    container.innerHTML = "<p>Error loading member data.</p>";
+    console.error(error);
   }
 }
 
 function displayMembers(members) {
   container.innerHTML = "";
 
-  members.forEach(member => {
+  members.forEach((member) => {
     const card = document.createElement("div");
     card.classList.add("member-card");
 
+    // ✅ Add membership level class
+    if (member.membershipLevel === 3) {
+      card.classList.add("gold");
+    } else if (member.membershipLevel === 2) {
+      card.classList.add("silver");
+    } else {
+      card.classList.add("basic");
+    }
+
     card.innerHTML = `
-      <img src="../images/${member.image}" alt="${member.name}" loading="lazy">
+      <img src="${member.image}" alt="Logo of ${member.name}" loading="lazy" />
       <h3>${member.name}</h3>
       <p>${member.address}</p>
       <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank">Visit Website</a>
+      <a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>
       <p>Membership Level: ${member.membershipLevel}</p>
     `;
 
@@ -39,7 +47,7 @@ function displayMembers(members) {
   });
 }
 
-// ✅ View toggle buttons
+// ✅ View toggle logic
 if (gridBtn && listBtn) {
   gridBtn.addEventListener("click", () => {
     container.classList.add("grid-view");
@@ -52,5 +60,5 @@ if (gridBtn && listBtn) {
   });
 }
 
-// ✅ Load members on page load
+// ✅ Initialize
 getMembers();
