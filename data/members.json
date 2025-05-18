@@ -1,0 +1,59 @@
+
+[
+  {
+    "name": "Daily Bread Bakery",
+    "address": "123 Main St, Minot, ND",
+    "phone": "(701) 555-1234",
+    "website": "https://dailybreadminot.com",
+    "image": "dailybread.jpg",
+    "membershipLevel": 3
+  },
+  {
+    "name": "North Plains Fitness",
+    "address": "456 Oak Ave, Minot, ND",
+    "phone": "(701) 555-5678",
+    "website": "https://northplainsfitness.com",
+    "image": "fitness.jpg",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Dakota Tech Solutions",
+    "address": "789 Tech Blvd, Minot, ND",
+    "phone": "(701) 555-9012",
+    "website": "https://dakotatechsolutions.com",
+    "image": "dakota-tech.jpg",
+    "membershipLevel": 1
+  },
+  {
+    "name": "GreenLeaf Landscaping",
+    "address": "321 Garden St, Minot, ND",
+    "phone": "(701) 555-3456",
+    "website": "https://greenleaflandscaping.com",
+    "image": "greenleaf.jpg",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Grace Studio",
+    "address": "654 Harmony Rd, Minot, ND",
+    "phone": "(701) 555-7890",
+    "website": "https://gracestudio.com",
+    "image": "grace-studio.jpg",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Minot Car Care",
+    "address": "888 Auto Ln, Minot, ND",
+    "phone": "(701) 555-2468",
+    "website": "https://minotcarcare.com",
+    "image": "car-care.jpg",
+    "membershipLevel": 1
+  },
+  {
+    "name": "Studio Bloom",
+    "address": "999 Flower Blvd, Minot, ND",
+    "phone": "(701) 555-6789",
+    "website": "https://studiobloom.com",
+    "image": "studio-bloom.jpg",
+    "membershipLevel": 2
+  }
+]

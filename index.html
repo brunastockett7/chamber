@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Minot Chamber of Commerce</title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="chamber/css/styles.css" />
+  <link rel="icon" href="chamber/images/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 </head>
 <body>
   <a href="#mainContent" class="skip-link">Skip to main content</a>
+
   <header>
-    <img src="images/north-dakota-flag.jpg" alt="North Dakota Flag" class="flag-icon">
+    <img src="chamber/images/minot-logo.png" alt="Minot Chamber Logo" class="logo" />
     <h1>Minot Chamber of Commerce</h1>
     <nav>
       <ul aria-label="Main site navigation">
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="discover.html">Discover</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
+        <li><a href="chamber/discover.html">Discover</a></li>
+        <li><a href="chamber/directory.html">Directory</a></li>
+        <li><a href="chamber/join.html">Join</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="mainContent">
     <section class="hero">
-      <img src="images/minot-downtown.jpg" alt="Downtown Minot" class="hero-img" loading="lazy">
+      <img src="chamber/images/scandinavian-park.jpg" alt="Scandinavian Park in Minot" class="hero-img" loading="lazy" />
       <div class="hero-text">
-        <h2>Welcome to Minot</h2>
-        <p>Connecting local businesses, nature, and community spirit.</p>
+        <h2>Building Business. Building Community.</h2>
+        <p>Welcome to the heart of Minot — where opportunity meets connection.</p>
       </div>
     </section>
 
@@ -39,6 +40,27 @@
         promoting economic growth, and building strong community connections in Minot, North Dakota.
         We provide networking opportunities, training workshops, local events, and resources that help businesses grow and thrive.
       </p>
+    </section>
+
+    <section class="gallery">
+      <h2>Local Highlights</h2>
+      <figure>
+        <img src="chamber/images/oak-park.jpg" alt="Oak Park in Minot" loading="lazy" />
+        <figcaption>Oak Park – peaceful nature at the heart of the city.</figcaption>
+      </figure>
+      <figure>
+        <img src="chamber/images/minot-air-show.jpg" alt="Minot Air Show" loading="lazy" />
+        <figcaption>The Minot Air Show – where community and excitement take flight.</figcaption>
+      </figure>
+    </section>
+
+    <section class="join-section">
+      <h2>Join Us!</h2>
+      <div class="join-highlight">
+        <img src="chamber/images/handshake.jpg" alt="Business partners shaking hands" class="join-img" loading="lazy" />
+        <p>Joining is easy and impactful. Take the next step toward growing your business and community presence.</p>
+        <a href="chamber/join.html" class="cta-button">Fill Out the Membership Form</a>
+      </div>
     </section>
 
     <section class="courses">
@@ -52,6 +74,24 @@
       <div id="course-list" class="course-list"></div>
       <p><strong>Total Credits:</strong> <span id="credit-total" aria-live="polite">0</span></p>
     </section>
+
+    <section class="testimonial">
+      <h2>Member Spotlights</h2>
+      <div class="spotlight-card">
+        <img src="chamber/images/member-profile.jpg" alt="Ashley Rivera - Owner of Grace Studio" class="spotlight-img" />
+        <div class="spotlight-description">
+          <p>“The Minot Chamber gave me the support and confidence to grow Grace Studio. I’ve never felt more connected.”</p>
+          <p><strong>Ashley Rivera</strong> – Owner, Grace Studio</p>
+        </div>
+      </div>
+      <div class="spotlight-card">
+        <img src="chamber/images/member-profile1.jpg" alt="Brandon Miller - Dakota Goods Co." class="spotlight-img" />
+        <div class="spotlight-description">
+          <p>“Since joining the Chamber, our visibility doubled. I’ve built valuable partnerships that last.”</p>
+          <p><strong>Brandon Miller</strong> – Founder, Dakota Goods Co.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -59,7 +99,8 @@
   </footer>
 
   <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="top-btn" aria-label="Scroll to top">↑ Top</button>
-  <script src="scripts/courses.js"></script>
-  <script src="scripts/script.js"></script>
+
+  <script src="chamber/js/courses.js"></script>
+  <script src="chamber/js/script.js"></script>
 </body>
 </html>
