@@ -53,7 +53,6 @@ nav a.active {
   max-height: 500px;
   object-fit: cover;
   border-radius: 8px;
-
 }
 
 /* Directory view toggle */
@@ -126,4 +125,44 @@ nav a.active {
 
 .basic {
   border-left-color: #aaa;
+}
+
+/* ✅ Course Section Styling */
+.courses {
+  background-color: #e6f0e6;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.course-card {
+  background-color: #fff7d6; /* soft pastel yellow */
+  padding: 1rem;
+  border-radius: 8px;
+  width: 200px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #2e4d2c;
+}
+
+.course-card p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+  color: #444;
 }

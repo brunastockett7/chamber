@@ -14,22 +14,26 @@ const filterButtons = document.querySelectorAll(".filter-btn");
 
 function renderCourses(filteredCourses) {
   courseList.innerHTML = "";
-  filteredCourses.forEach(course => {
-    const div = document.createElement("div");
-    div.classList.add("course");
-    if (course.completed) div.classList.add("completed");
 
-    div.innerHTML = `
+  filteredCourses.forEach(course => {
+    const courseCard = document.createElement("div");
+    courseCard.classList.add("course-card");
+    if (course.completed) courseCard.classList.add("completed");
+
+    courseCard.setAttribute("tabindex", "0");
+    courseCard.setAttribute("aria-label", `${course.name}, ${course.subject}, ${course.credits} credits`);
+
+    courseCard.innerHTML = `
       <h3>${course.name}</h3>
-      <p>Subject: ${course.subject}</p>
-      <p>Credits: ${course.credits}</p>
-      ${course.completed ? "<p class='status'>✅ Completed</p>" : ""}
+      <p><strong>Subject:</strong> ${course.subject}</p>
+      <p><strong>Credits:</strong> ${course.credits}</p>
+      ${course.completed ? `<p class="status">✅ Completed</p>` : ""}
     `;
 
-    courseList.appendChild(div);
+    courseList.appendChild(courseCard);
   });
 
-  const total = filteredCourses.reduce((sum, c) => sum + c.credits, 0);
+  const total = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
   creditTotal.textContent = total;
 }
 
@@ -40,7 +44,7 @@ renderCourses(courses);
 filterButtons.forEach(button => {
   button.addEventListener("click", () => {
     const subject = button.getAttribute("data-subject");
-    const filtered = subject === "All" ? courses : courses.filter(course => course.subject === subject);
+    const filtered = courses.filter(course => course.subject === subject);
     renderCourses(filtered);
   });
 });
