@@ -3,7 +3,7 @@
     "name": "Daily Bread Bakery",
     "address": "123 Main St, Minot, ND",
     "phone": "(701) 555-1234",
-    "website": "https://dailybreadminot.com",
+    "website": "https://www.minotsdailybread.com/",
     "image": "daily-bread.jpg",
     "membershipLevel": 3
   },
@@ -11,7 +11,7 @@
     "name": "North Plains Fitness",
     "address": "456 Oak Ave, Minot, ND",
     "phone": "(701) 555-5678",
-    "website": "https://northplainsfitness.com",
+    "website": "https://www.bing.com/search?q=north+plains+fitness&cvid=5d837b710bba47ae8b4bedd87c53f7fe&gs_lcrp=EgRlZGdlKgYIARBFGDsyBggAEEUYOTIGCAEQRRg7MgYIAhAuGEAyBggDEEUYOzIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAuGEDSAQg0OTgyajBqOagCCLACAQ&FORM=ANAB01&PC=LCTS",
     "image": "fitness.jpg",
     "membershipLevel": 2
   },
@@ -19,7 +19,7 @@
     "name": "Dakota Tech Solutions",
     "address": "789 Tech Blvd, Minot, ND",
     "phone": "(701) 555-9012",
-    "website": "https://dakotatechsolutions.com",
+    "website": "",
     "image": "dakota-tech.jpg",
     "membershipLevel": 1
   },
@@ -27,7 +27,7 @@
     "name": "GreenLeaf Landscaping",
     "address": "321 Garden St, Minot, ND",
     "phone": "(701) 555-3456",
-    "website": "https://greenleaflandscaping.com",
+    "website": "",
     "image": "greenleaf.jpg",
     "membershipLevel": 2
   },
@@ -35,7 +35,7 @@
     "name": "Grace Studio",
     "address": "654 Harmony Rd, Minot, ND",
     "phone": "(701) 555-7890",
-    "website": "https://gracestudio.com",
+    "website": "https://www.bing.com/search?q=grace+studio+minot+nd&cvid=60824fc9039146e6a3a72fa2e010eb7b&gs_lcrp=EgRlZGdlKgYIABBFGDsyBggAEEUYOzIGCAEQABhAMgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEEUYPDIGCAcQRRg8MgYICBBFGDzSAQg1OTM2ajBqNKgCALACAA&FORM=ANAB01&PC=LCTS",
     "image": "grace-studio.jpg",
     "membershipLevel": 3
   },
@@ -43,7 +43,7 @@
     "name": "Minot Car Care",
     "address": "888 Auto Ln, Minot, ND",
     "phone": "(701) 555-2468",
-    "website": "https://minotcarcare.com",
+    "website": "https://carcareexpressanddavesdiesel.com/",
     "image": "car-care.jpg",
     "membershipLevel": 1
   },
@@ -51,7 +51,7 @@
     "name": "Studio Bloom",
     "address": "999 Flower Blvd, Minot, ND",
     "phone": "(701) 555-6789",
-    "website": "https://studiobloom.com",
+    "website": "",
     "image": "studio-bloom.jpg",
     "membershipLevel": 2
   }
