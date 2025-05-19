@@ -50,11 +50,10 @@ nav a.active {
 /* ✅ Hero image styling */
 .hero-img {
   width: 100%;
-  max-height: 474px;
+  max-height: 500px;
   object-fit: cover;
   border-radius: 8px;
-  display: block;
-  margin: 0 auto;
+
 }
 
 /* Directory view toggle */
