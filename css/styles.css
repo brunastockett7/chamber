@@ -289,20 +289,21 @@ form button:hover {
 
 .testimonial-container {
   display: flex;
-  flex-wrap: wrap;              /* allow wrapping */
+  flex-wrap: nowrap;           /* prevent vertical wrapping */
   gap: 2rem;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;          /* keep horizontal */
+  justify-content: center;     /* center horizontally */
+  align-items: center;         /* vertical center */
+  overflow-x: auto;            /* horizontal scroll if needed */
+  padding: 1rem 0;
 }
 
 .spotlight-card {
+  flex: 0 0 300px;             /* fixed width, no grow or shrink */
   background-color: #fff7d6;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   text-align: center;
-  width: 300px;
   max-width: 100%;
 }
 
@@ -320,10 +321,24 @@ form button:hover {
   color: #444;
 }
 
-@media (min-width: 700px) {
+/* Optional scrollbar styling */
+.testimonial-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.testimonial-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.testimonial-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Responsive: wrap on very small screens */
+@media (max-width: 600px) {
   .testimonial-container {
-    flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
