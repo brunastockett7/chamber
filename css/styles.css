@@ -83,6 +83,9 @@ nav a.active {
 #memberContainer {
   display: grid;
   gap: 1rem;
+  background-color: #fff7d6; /* pastel yellow background */
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 .grid-view {
@@ -196,7 +199,8 @@ nav a.active {
 .join-section {
   text-align: center;
   padding: 2rem;
-  background-color: #fdfcf7;
+  background-color: #fff7d6; /* pastel yellow background */
+  border-radius: 10px;
 }
 
 .join-section h2 {
@@ -285,9 +289,11 @@ form button:hover {
 
 .testimonial-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;              /* allow wrapping */
   gap: 2rem;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;          /* keep horizontal */
 }
 
 .spotlight-card {
@@ -296,8 +302,8 @@ form button:hover {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   text-align: center;
-  width: 100%;
-  max-width: 320px;
+  width: 300px;
+  max-width: 100%;
 }
 
 .spotlight-img {
