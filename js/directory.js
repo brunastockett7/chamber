@@ -5,7 +5,7 @@ const listBtn = document.getElementById("listBtn");
 // ✅ Load and display members
 async function getMembers() {
   try {
-    const response = await fetch("../data/members.json"); // adjust path if needed
+    const response = await fetch("../data/members.json");
     if (!response.ok) {
       throw new Error("Failed to fetch member data");
     }
@@ -37,9 +37,9 @@ function displayMembers(members) {
     card.innerHTML = `
       <img src="${member.image}" alt="Logo of ${member.name}" loading="lazy" />
       <h3>${member.name}</h3>
-      <p>${member.address}</p>
-      <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>
+      <p>${member.address || ""}</p>
+      <p>${member.phone || ""}</p>
+      ${member.website ? `<a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>` : `<p>No website available</p>`}
       <p>Membership Level: ${member.membershipLevel}</p>
     `;
 
