@@ -47,11 +47,65 @@
         <figcaption>Explore Minot’s Scandinavian roots at this cultural site.</figcaption>
       </figure>
     </section>
+
+    <!-- Weather Section -->
+    <section class="weather">
+      <h2>Current Weather in Minot</h2>
+      <div id="weatherData">
+        <p>Loading weather information...</p>
+      </div>
+    </section>
+
+    <!-- Cost of Living Section -->
+    <section class="cost-of-living">
+      <h2>Cost of Living</h2>
+      <p>
+        Curious about living costs in Minot? 
+        <a href="https://www.bestplaces.net/cost_of_living/city/north_dakota/minot" target="_blank" rel="noopener">Click here</a> 
+        to explore housing prices, utilities, groceries, and more.
+      </p>
+      <p>
+        Find out how much income you need to live comfortably in Minot, ND.
+      </p>
+    </section>
+
+    <!-- Local News Section -->
+    <section class="local-news">
+      <h2>Local News</h2>
+      <p>
+        Stay up to date with Minot news and events by visiting 
+        <a href="https://www.kfyrtv.com/" target="_blank" rel="noopener">KFYR-TV Minot News</a>.
+      </p>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Minot Chamber of Commerce | Last Modified: <span id="lastModified"></span></p>
+    <p>&copy; <span id="year"></span> Minot Chamber of Commerce</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
+
+  <script>
+    async function fetchWeather() {
+      const weatherDiv = document.getElementById('weatherData');
+      try {
+        const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=48.2325&longitude=-101.2963&current_weather=true');
+        if (!response.ok) throw new Error('Weather fetch failed');
+        const data = await response.json();
+        const weather = data.current_weather;
+
+        weatherDiv.innerHTML = `
+          <p>Temperature: ${weather.temperature}°C</p>
+          <p>Wind Speed: ${weather.windspeed} km/h</p>
+          <p>Weather Code: ${weather.weathercode}</p>
+          <p>Time: ${new Date(weather.time).toLocaleString()}</p>
+        `;
+      } catch (error) {
+        weatherDiv.textContent = 'Unable to load weather data.';
+        console.error(error);
+      }
+    }
+    fetchWeather();
+  </script>
 
   <script src="../js/script.js"></script>
 </body>

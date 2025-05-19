@@ -320,3 +320,34 @@ form button:hover {
     justify-content: center;
   }
 }
+
+/* === NEW DISCOVER PAGE SECTIONS === */
+.weather, .cost-of-living, .local-news {
+  background-color: #f9f9ed;
+  padding: 1.5rem 2rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  max-width: 700px;
+  text-align: center;
+}
+
+.weather h2, .cost-of-living h2, .local-news h2 {
+  color: #2e4d2c;
+  margin-bottom: 1rem;
+}
+
+.weather p, .cost-of-living p, .local-news p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.cost-of-living a, .local-news a {
+  color: #2e4d2c;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.cost-of-living a:hover, .local-news a:hover {
+  color: #5a7d3a;
+}
