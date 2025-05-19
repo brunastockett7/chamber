@@ -301,8 +301,8 @@ form button:hover {
 }
 
 .spotlight-img {
-  width: 160px;
-  height: 160px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 0.5rem;
