@@ -1,6 +1,6 @@
-/* Header styling */
+/* === HEADER STYLING === */
 header {
-  background-color: #e6f0e6; /* soft green neutral */
+  background-color: #e6f0e6;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -18,11 +18,10 @@ header {
 
 h1 {
   font-size: 1.8rem;
-  color: #2e4d2c; /* earth green */
+  color: #2e4d2c;
   margin-bottom: 1rem;
 }
 
-/* Navigation styles */
 nav ul {
   list-style: none;
   display: flex;
@@ -44,10 +43,10 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  background-color: #f6e8b1; /* pastel yellow */
+  background-color: #f6e8b1;
 }
 
-/* ✅ Hero image styling - updated */
+/* === HERO IMAGE === */
 .hero-img {
   width: 100%;
   height: auto;
@@ -56,17 +55,17 @@ nav a.active {
   border-radius: 8px;
   display: block;
   image-rendering: auto;
-  filter: brightness(1.03) contrast(1.05); /* enhances clarity */
+  filter: brightness(1.03) contrast(1.05);
 }
 
-/* Directory view toggle */
+/* === DIRECTORY VIEW TOGGLE === */
 .view-toggle {
   margin: 1rem 0;
   text-align: center;
 }
 
 .view-toggle button {
-  background-color: #f6e8b1; /* pastel yellow */
+  background-color: #f6e8b1;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -77,10 +76,10 @@ nav a.active {
 }
 
 .view-toggle button:hover {
-  background-color: #f3dc8b; /* darker pastel yellow */
+  background-color: #f3dc8b;
 }
 
-/* Member container styles */
+/* === DIRECTORY MEMBERS === */
 #memberContainer {
   display: grid;
   gap: 1rem;
@@ -117,20 +116,11 @@ nav a.active {
   display: block;
 }
 
-/* Optional level highlights */
-.gold {
-  border-left-color: gold;
-}
+.gold { border-left-color: gold; }
+.silver { border-left-color: silver; }
+.basic { border-left-color: #aaa; }
 
-.silver {
-  border-left-color: silver;
-}
-
-.basic {
-  border-left-color: #aaa;
-}
-
-/* ✅ Course Section Styling */
+/* === COURSE LIST === */
 .courses {
   background-color: #e6f0e6;
   padding: 2rem;
@@ -146,7 +136,7 @@ nav a.active {
 }
 
 .course-card {
-  background-color: #fff7d6; /* soft pastel yellow */
+  background-color: #fff7d6;
   padding: 1rem;
   border-radius: 8px;
   width: 200px;
@@ -170,7 +160,7 @@ nav a.active {
   color: #444;
 }
 
-/* ✅ Discover Page: Image Gallery Section */
+/* === DISCOVER PAGE === */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -202,24 +192,37 @@ nav a.active {
   color: #333;
 }
 
-/* ✅ Join Page Styling */
+/* === JOIN PAGE === */
+.join-section {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fdfcf7;
+}
+
+.join-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #2e4d2c;
+}
+
+.join-section p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
 .join-img {
-  max-width: 180px;
+  width: 250px;
   height: auto;
   border-radius: 8px;
   margin: 1rem auto;
   display: block;
 }
 
-.join-section h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
 .cta-button {
-  background-color: #f6e8b1;
-  color: #2e4d2c;
+  background-color: #2e4d2c;
+  color: white;
   padding: 0.5rem 1.2rem;
   text-decoration: none;
   border-radius: 6px;
@@ -228,42 +231,92 @@ nav a.active {
   margin-top: 1rem;
 }
 
+/* === JOIN FORM === */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  text-align: left;
+  font-weight: bold;
+  color: #2e4d2c;
+}
+
+form input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 0.6rem;
+  background-color: #2e4d2c;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #3a6136;
+}
+
+/* === MEMBER SPOTLIGHTS === */
 .testimonial {
   background-color: #fffef6;
   padding: 2rem;
   border-radius: 10px;
+  margin-top: 2rem;
 }
 
 .testimonial h2 {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #2e4d2c;
   margin-bottom: 2rem;
 }
 
-.testimonial .spotlight-card {
+.testimonial-container {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   align-items: center;
-  margin-bottom: 2rem;
 }
 
-@media (min-width: 700px) {
-  .testimonial {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-  }
-
-  .testimonial .spotlight-card {
-    max-width: 280px;
-  }
+.spotlight-card {
+  background-color: #fff7d6;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
 }
 
 .spotlight-img {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 0.5rem;
+}
+
+.spotlight-description p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+@media (min-width: 700px) {
+  .testimonial-container {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
