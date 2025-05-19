@@ -288,17 +288,21 @@ form button:hover {
 }
 
 .testimonial-container {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 1rem 2rem;
   display: flex;
-  flex-wrap: nowrap;           /* prevent vertical wrapping */
+  flex-wrap: nowrap;           /* NO vertical stacking */
   gap: 2rem;
   justify-content: center;     /* center horizontally */
-  align-items: center;         /* vertical center */
-  overflow-x: auto;            /* horizontal scroll if needed */
-  padding: 1rem 0;
+  align-items: center;
+  overflow-x: auto;
+  box-sizing: border-box;
 }
 
 .spotlight-card {
-  flex: 0 0 300px;             /* fixed width, no grow or shrink */
+  flex: 0 0 300px;             /* fixed width cards */
   background-color: #fff7d6;
   padding: 1rem;
   border-radius: 8px;
@@ -335,10 +339,12 @@ form button:hover {
   background-color: transparent;
 }
 
-/* Responsive: wrap on very small screens */
+/* Responsive wrap on small screens if you want */
 @media (max-width: 600px) {
   .testimonial-container {
     flex-wrap: wrap;
+    width: 100%;
+    margin-left: 0;
   }
 }
 
