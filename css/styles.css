@@ -47,13 +47,16 @@ nav a.active {
   background-color: #f6e8b1; /* pastel yellow */
 }
 
-/* ✅ Hero image styling */
+/* ✅ Hero image styling - updated */
 .hero-img {
   width: 100%;
+  height: auto;
   max-height: 500px;
   object-fit: cover;
   border-radius: 8px;
   display: block;
+  image-rendering: auto;
+  filter: brightness(1.03) contrast(1.05); /* enhances clarity */
 }
 
 /* Directory view toggle */
@@ -104,7 +107,6 @@ nav a.active {
   border-left: 5px solid #ccc;
 }
 
-/* ✅ Improved image styling */
 .member-card img {
   width: 100%;
   max-width: 120px;
