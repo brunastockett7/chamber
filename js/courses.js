@@ -1,3 +1,5 @@
+/* eslint-env browser */
+
 // Course data
 const courses = [
   { name: "WDD 130", subject: "Major", credits: 3, completed: true },
@@ -12,7 +14,10 @@ const courseList = document.getElementById("course-list");
 const creditTotal = document.getElementById("credit-total");
 const filterButtons = document.querySelectorAll(".filter-btn");
 
+// Render courses
 function renderCourses(filteredCourses) {
+  if (!courseList || !creditTotal) return;
+
   courseList.innerHTML = "";
 
   filteredCourses.forEach(course => {
@@ -21,7 +26,10 @@ function renderCourses(filteredCourses) {
     if (course.completed) courseCard.classList.add("completed");
 
     courseCard.setAttribute("tabindex", "0");
-    courseCard.setAttribute("aria-label", `${course.name}, ${course.subject}, ${course.credits} credits`);
+    courseCard.setAttribute(
+      "aria-label",
+      `${course.name}, ${course.subject}, ${course.credits} credits${course.completed ? ', completed' : ''}`
+    );
 
     courseCard.innerHTML = `
       <h3>${course.name}</h3>
@@ -38,13 +46,15 @@ function renderCourses(filteredCourses) {
 }
 
 // Initial render
-renderCourses(courses);
+document.addEventListener("DOMContentLoaded", () => {
+  renderCourses(courses);
 
-// Filter logic
-filterButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    const subject = button.getAttribute("data-subject");
-    const filtered = courses.filter(course => course.subject === subject);
-    renderCourses(filtered);
+  // Filter logic
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const subject = button.getAttribute("data-subject");
+      const filtered = courses.filter(course => course.subject === subject);
+      renderCourses(filtered);
+    });
   });
 });
