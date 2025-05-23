@@ -30,14 +30,13 @@ async function fetchWeather() {
     const weather = data.current_weather;
 
     weatherDiv.innerHTML = `
-      <p>Temperature: ${weather.temperature}°C</p>
-      <p>Wind Speed: ${weather.windspeed} km/h</p>
-      <p>Weather Code: ${weather.weathercode}</p>
-      <p>Time: ${new Date(weather.time).toLocaleString()}</p>
+      <p aria-label="Current temperature">🌡️ Temperature: ${weather.temperature}°C</p>
+      <p aria-label="Wind speed">🌬️ Wind Speed: ${weather.windspeed} km/h</p>
+      <p aria-label="Weather code">🌦️ Weather Code: ${weather.weathercode}</p>
+      <p aria-label="Data time">🕒 Time: ${new Date(weather.time).toLocaleString()}</p>
     `;
   } catch (error) {
     weatherDiv.textContent = 'Unable to load weather data.';
-    // eslint-disable-next-line no-console
     console.error('Error fetching weather:', error);
   }
 }

@@ -7,9 +7,16 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" aria-label="Search"><i class="fas fa-search"></i></a>
+    </div>
     <img src="images/minot-logo.jpg" alt="Minot Chamber Logo" class="logo">
     <h1>Minot Chamber of Commerce</h1>
     <nav>
@@ -24,12 +31,46 @@
 
   <main>
     <section class="hero">
-      <!-- Removed loading="lazy" to improve image quality on load -->
       <img src="images/minot-downtown.jpg" alt="Minot Downtown" class="hero-img">
       <div class="hero-text">
         <h2>Building Business. Building Community.</h2>
         <p>Welcome to the heart of Minot — where opportunity meets connection.</p>
+        <a href="chamber/join.html" class="cta">Join Us Today</a>
       </div>
+    </section>
+
+    <section class="feature-photo">
+      <img src="images/minot.feature.jpg" alt="Classroom with students raising hands">
+      <div class="feature-text">
+        <h2>Live in Minot</h2>
+        <p>Minot is a vibrant community with great schools and opportunities for families to thrive and grow together.</p>
+      </div>
+    </section>
+
+    <section class="industry">
+      <div class="industry-item">
+        <img src="images/oil-gas.jpg" alt="Oil field equipment in snow">
+        <div>
+          <h3>Oil & Gas Industry</h3>
+          <p>Minot is located near the Bakken Formation, making it a central hub for oil production and supporting industries.</p>
+        </div>
+      </div>
+      <div class="industry-item">
+        <img src="images/rail-train.jpg" alt="Canadian Pacific train in Minot">
+        <div>
+          <h3>Rail & Distribution</h3>
+          <p>Minot is a key railway location for transporting goods and agricultural products across the Midwest.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-minot">
+      <h2>Why Minot?</h2>
+      <ul>
+        <li>Minot is home to the North Dakota State Fair.</li>
+        <li>Minot hosts the largest Scandinavian festival in North America — the Norsk Høstfest.</li>
+        <li>Minot's Oak Park was voted “America’s Favorite Park” and won a $100,000 grant from Coca-Cola.</li>
+      </ul>
     </section>
 
     <section class="about">
@@ -42,6 +83,24 @@
       </p>
     </section>
 
+    <section class="events">
+      <h2>Current Events</h2>
+      <p>Business After Hours – June 15, 5:00 PM</p>
+      <p>Summer Market Kickoff – June 20, 10:00 AM</p>
+    </section>
+
+    <section class="weather">
+      <h2>Weather</h2>
+      <p id="temperature">Loading...</p>
+      <p id="description">Loading...</p>
+      <div id="forecast">Loading forecast...</div>
+    </section>
+
+    <section class="spotlights">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight-cards">Loading members...</div>
+    </section>
+
     <section class="courses">
       <h2>My Course List</h2>
       <div class="filters">
@@ -49,9 +108,7 @@
         <button class="filter-btn" data-subject="General">General</button>
         <button class="filter-btn" data-subject="Elective">Elective</button>
       </div>
-
       <div id="course-list" class="course-list horizontal"></div>
-
       <p><strong>Total Credits:</strong> <span id="credit-total" aria-live="polite">0</span></p>
     </section>
   </main>
@@ -64,5 +121,7 @@
 
   <script src="js/courses.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/spotlight.js"></script>
 </body>
 </html>

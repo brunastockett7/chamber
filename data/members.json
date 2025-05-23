@@ -5,7 +5,8 @@
     "phone": "(701) 555-1234",
     "website": "https://www.minotsdailybread.com/",
     "image": "../images/daily-bread.jpg",
-    "membershipLevel": 3
+    "membershipLevel": 3,
+    "membership": "Gold"
   },
   {
     "name": "North Plains Fitness",
@@ -13,7 +14,8 @@
     "phone": "(701) 555-5678",
     "website": "https://www.bing.com/search?q=north+plains+fitness&cvid=5d837b710bba47ae8b4bedd87c53f7fe&gs_lcrp=EgRlZGdlKgYIARBFGDsyBggAEEUYOTIGCAEQRRg7MgYIAhAuGEAyBggDEEUYOzIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAuGEDSAQg0OTgyajBqOagCCLACAQ&FORM=ANAB01&PC=LCTS",
     "image": "../images/fitness.jpg",
-    "membershipLevel": 2
+    "membershipLevel": 2,
+    "membership": "Silver"
   },
   {
     "name": "Dakota Tech Solutions",
@@ -21,7 +23,8 @@
     "phone": "(701) 555-9012",
     "website": "",
     "image": "../images/dakota-tech.jpg",
-    "membershipLevel": 1
+    "membershipLevel": 1,
+    "membership": "Bronze"
   },
   {
     "name": "GreenLeaf Landscaping",
@@ -29,7 +32,8 @@
     "phone": "(701) 555-3456",
     "website": "",
     "image": "../images/greenleaf.jpg",
-    "membershipLevel": 2
+    "membershipLevel": 2,
+    "membership": "Silver"
   },
   {
     "name": "Grace Studio",
@@ -37,7 +41,8 @@
     "phone": "(701) 555-7890",
     "website": "https://www.bing.com/search?q=grace+studio+minot+nd&cvid=60824fc9039146e6a3a72fa2e010eb7b&gs_lcrp=EgRlZGdlKgYIABBFGDsyBggAEEUYOzIGCAEQABhAMgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEEUYPDIGCAcQRRg8MgYICBBFGDzSAQg1OTM2ajBqNKgCALACAA&FORM=ANAB01&PC=LCTS",
     "image": "../images/grace-studio.jpg",
-    "membershipLevel": 3
+    "membershipLevel": 3,
+    "membership": "Gold"
   },
   {
     "name": "Minot Car Care",
@@ -45,7 +50,8 @@
     "phone": "(701) 555-2468",
     "website": "https://carcareexpressanddavesdiesel.com/",
     "image": "../images/car-care.jpg",
-    "membershipLevel": 1
+    "membershipLevel": 1,
+    "membership": "Bronze"
   },
   {
     "name": "Studio Bloom",
@@ -53,6 +59,8 @@
     "phone": "(701) 555-6789",
     "website": "",
     "image": "../images/studio-bloom.jpg",
-    "membershipLevel": 2
+    "membershipLevel": 2,
+    "membership": "Silver"
   }
 ]
+

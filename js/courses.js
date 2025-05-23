@@ -35,7 +35,7 @@ function renderCourses(filteredCourses) {
       <h3>${course.name}</h3>
       <p><strong>Subject:</strong> ${course.subject}</p>
       <p><strong>Credits:</strong> ${course.credits}</p>
-      ${course.completed ? `<p class="status">✅ Completed</p>` : ""}
+      ${course.completed ? `<p class="status" aria-label="Course completed">✅ Completed</p>` : ""}
     `;
 
     courseList.appendChild(courseCard);
@@ -51,7 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Filter logic
   filterButtons.forEach(button => {
+    button.setAttribute("aria-pressed", "false");
     button.addEventListener("click", () => {
+      filterButtons.forEach(btn => btn.setAttribute("aria-pressed", "false"));
+      button.setAttribute("aria-pressed", "true");
+
       const subject = button.getAttribute("data-subject");
       const filtered = courses.filter(course => course.subject === subject);
       renderCourses(filtered);

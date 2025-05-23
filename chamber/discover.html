@@ -7,9 +7,16 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" aria-label="Search"><i class="fas fa-search"></i></a>
+    </div>
     <img src="../images/minot-logo.jpg" alt="Minot Chamber Logo" class="logo">
     <h1>Minot Chamber of Commerce</h1>
     <nav>
@@ -49,7 +56,7 @@
     </section>
 
     <!-- Weather Section -->
-    <section class="weather">
+    <section class="weather" aria-live="polite">
       <h2>Current Weather in Minot</h2>
       <div id="weatherData">
         <p>Loading weather information...</p>

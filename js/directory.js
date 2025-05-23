@@ -5,6 +5,11 @@ const container = document.getElementById('memberContainer');
 const gridBtn = document.getElementById('gridBtn');
 const listBtn = document.getElementById('listBtn');
 
+// Helper function to convert level to name
+function getMembershipName(level) {
+  return level === 3 ? 'Gold' : level === 2 ? 'Silver' : 'Bronze';
+}
+
 // Display members on the page
 function displayMembers(members) {
   if (!container) return;
@@ -15,7 +20,7 @@ function displayMembers(members) {
     const card = document.createElement('div');
     card.classList.add('member-card');
 
-    // Add membership level class
+    // Add membership level class for styling
     switch (member.membershipLevel) {
       case 3:
         card.classList.add('gold');
@@ -24,8 +29,13 @@ function displayMembers(members) {
         card.classList.add('silver');
         break;
       default:
-        card.classList.add('basic');
+        card.classList.add('bronze');
     }
+
+    const membershipName = getMembershipName(member.membershipLevel);
+
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-label', `${member.name}, ${membershipName} Member`);
 
     card.innerHTML = `
       <img src="${member.image}" alt="Logo of ${member.name}" loading="lazy">
@@ -33,11 +43,11 @@ function displayMembers(members) {
       <p>${member.address || ''}</p>
       <p>${member.phone || ''}</p>
       ${
-  member.website
-    ? `<a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>`
-    : '<p>No website available</p>'
-}
-      <p>Membership Level: ${member.membershipLevel}</p>
+        member.website
+          ? `<a href="${member.website}" target="_blank" rel="noopener">Visit Website</a>`
+          : '<p>No website available</p>'
+      }
+      <p class="membership">Membership Level: ${membershipName}</p>
     `;
 
     container.appendChild(card);
@@ -58,7 +68,6 @@ async function getMembers() {
     displayMembers(data);
   } catch (error) {
     container.innerHTML = '<p>Error loading member data.</p>';
-    // eslint-disable-next-line no-console
     console.error('Fetch error:', error);
   }
 }
