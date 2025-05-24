@@ -38,22 +38,19 @@
       </div>
     </section>
 
-    <section class="feature-photo">
-      <img src="images/minot.feature.jpg" alt="Classroom with students raising hands">
-      <div class="feature-text">
-        <h2>Live in Minot</h2>
+    <section class="industry" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; text-align: center;">
+      <div class="industry-item" style="max-width: 300px;">
+        <img src="images/minot.feature.jpg" alt="Classroom with students raising hands" style="width: 100%; border-radius: 10px;">
+        <h3>Live in Minot</h3>
         <p>Minot is a vibrant community with great schools and opportunities for families to thrive and grow together.</p>
       </div>
-    </section>
-
-    <section class="industry">
-      <div class="industry-item">
-        <img src="images/oil-gas.jpg" alt="Oil field equipment in snow">
+      <div class="industry-item" style="max-width: 300px;">
+        <img src="images/oil-gas.jpg" alt="Oil field equipment in snow" style="width: 100%; border-radius: 10px;">
         <h3>Oil & Gas Industry</h3>
         <p>Minot is located near the Bakken Formation, making it a central hub for oil production and supporting industries.</p>
       </div>
-      <div class="industry-item">
-        <img src="images/rail-train.jpg" alt="Canadian Pacific train in Minot">
+      <div class="industry-item" style="max-width: 300px;">
+        <img src="images/rail-train.jpg" alt="Canadian Pacific train in Minot" style="width: 100%; border-radius: 10px;">
         <h3>Rail & Distribution</h3>
         <p>Minot is a key railway location for transporting goods and agricultural products across the Midwest.</p>
       </div>
@@ -86,19 +83,19 @@
 
     <section class="weather" style="text-align: center;">
       <h2>Weather</h2>
-      <p id="temperature">Loading...</p>
-      <p id="description">Loading...</p>
-      <div id="forecast">Loading forecast...</div>
+      <p id="temperature">72°F</p>
+      <p id="description">Partly Cloudy</p>
+      <div id="forecast">Tomorrow: High 76°F, Low 58°F</div>
     </section>
 
-    <section class="courses">
+    <section class="courses" style="text-align: center;">
       <h2>My Course List</h2>
       <div class="filters">
         <button class="filter-btn" data-subject="Major">Major</button>
         <button class="filter-btn" data-subject="General">General</button>
         <button class="filter-btn" data-subject="Elective">Elective</button>
       </div>
-      <div id="course-list" class="course-list horizontal"></div>
+      <div id="course-list" class="course-list horizontal" style="display: flex; justify-content: center;"></div>
       <p><strong>Total Credits:</strong> <span id="credit-total" aria-live="polite">0</span></p>
     </section>
   </main>

@@ -82,7 +82,7 @@ nav a.active {
   background-color: #ffffff;
   padding: 1rem;
   border-radius: 10px;
-  max-width: 300px;
+  max-width: 280px;
   width: 100%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
@@ -178,13 +178,14 @@ basic { border-left-color: #888888; }
   padding: 2rem;
   border-radius: 10px;
   margin-top: 2rem;
+  text-align: center;
 }
 
 .course-list {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .course-card {
@@ -286,19 +287,42 @@ form button:hover {
 }
 
 /* === NEW DISCOVER PAGE SECTIONS === */
-.weather, .cost-of-living, .local-news {
+.weather {
+  background-color: #ffffff;
+  color: #333333;
+  text-align: center;
+  padding: 2rem;
+}
+
+.weather h2 {
+  color: #3A8B87;
+  margin-bottom: 0.5rem;
+}
+
+#temperature,
+#description,
+#forecast {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+.cost-of-living,
+.local-news {
   background-color: #ffffff;
   color: #333333;
 }
 
-.weather h2, .cost-of-living h2, .local-news h2 {
+.cost-of-living h2,
+.local-news h2 {
   color: #3A8B87;
 }
 
-.cost-of-living a, .local-news a {
+.cost-of-living a,
+.local-news a {
   color: #3A8B87;
 }
 
-.cost-of-living a:hover, .local-news a:hover {
+.cost-of-living a:hover,
+.local-news a:hover {
   color: #D9A273;
 }
