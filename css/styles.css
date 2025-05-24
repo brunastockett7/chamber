@@ -5,6 +5,21 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  text-align: center;
+}
+
+/* === HERO IMAGE === */
+.hero {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
 }
 
 /* === HEADER STYLING === */
@@ -56,38 +71,94 @@ nav a.active {
   color: #fff;
 }
 
-/* === GALLERY CENTERING === */
-.gallery {
-  text-align: center;
-  padding: 2rem;
-}
-
-.gallery-row {
+/* === INDUSTRY SECTION === */
+.industry {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
   gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
 }
 
-.gallery figure {
-  width: 250px;
+.industry-item {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
-.gallery img {
+.industry-item img {
   width: 100%;
-  border-radius: 8px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
 }
 
-.gallery figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #444;
+.industry-item h3 {
+  font-size: 1.3rem;
+  color: #3A8B87;
+  margin-bottom: 0.4rem;
 }
 
-/* === CENTERED TEXT FOR DISCOVER SECTIONS === */
-.about,
-.cost-of-living,
-.local-news {
+.industry-item p {
+  font-size: 0.95rem;
+  color: #333333;
+}
+
+/* === MAIN CENTERED SECTIONS === */
+.centered-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* === WHY MINOT SECTION === */
+.why-minot {
   text-align: center;
   padding: 2rem;
+}
+
+.why-minot ul {
+  list-style-position: inside;
+  display: inline-block;
+  text-align: left;
+}
+
+/* === DIRECTORY MEMBERS === */
+.member-card {
+  background-color: #ffffff;
+  color: #222222;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-left: 5px solid #3A8B87;
+}
+
+.member-card img {
+  width: 100%;
+  max-width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 0 auto 0.5rem;
+  display: block;
+}
+
+.gold { border-left-color: #ccc; }
+.silver { border-left-color: silver; }
+.basic { border-left-color: #888888; }
+
+/* === WEATHER SECTION === */
+.weather {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
