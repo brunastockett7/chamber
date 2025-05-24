@@ -68,19 +68,23 @@ nav a.active {
   filter: brightness(1.03) contrast(1.05);
 }
 
-/* === INDUSTRY SECTION: CENTERED GRID FOR EDUCATION, OIL, TRAIN === */
+/* === INDUSTRY SECTION: GRID CARDS === */
 .industry {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   padding: 2rem;
   text-align: center;
 }
 
 .industry-item {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
   max-width: 300px;
-  flex: 1 1 300px;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .industry-item img {
@@ -166,7 +170,7 @@ nav a.active {
 
 .gold { border-left-color: gold; }
 .silver { border-left-color: silver; }
-.basic { border-left-color: #888888; }
+basic { border-left-color: #888888; }
 
 /* === COURSE LIST === */
 .courses {
