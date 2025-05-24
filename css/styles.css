@@ -11,7 +11,7 @@ body {
 /* === HERO IMAGE === */
 .hero img {
   width: 100%;
-  max-height: 400px;
+  max-height: 380px;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
@@ -165,4 +165,52 @@ nav a.active {
   margin-top: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* View Toggle Buttons */
+.directory-controls {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.directory-controls button {
+  background-color: #3A8B87;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.directory-controls button:hover {
+  background-color: #2f6f69;
+}
+
+/* Medal Icon */
+.medal {
+  width: 30px;
+  height: auto;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+/* Grid and List Layouts */
+#directory.grid-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+#directory.list-view {
+  display: block;
+}
+
+#directory.list-view .member-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  padding: 1rem;
 }
