@@ -68,63 +68,37 @@ nav a.active {
   filter: brightness(1.03) contrast(1.05);
 }
 
-/* === FEATURE PHOTO SECTION === */
-.feature-photo {
-  text-align: center;
-  padding: 2rem;
-}
-
-.feature-photo img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-.feature-text h2 {
-  margin-top: 0.5rem;
-  font-size: 1.8rem;
-  color: #3A8B87;
-}
-
-.feature-text p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1rem;
-  color: #333333;
-}
-
-/* === INDUSTRY SECTION IMAGES === */
+/* === INDUSTRY SECTION: CENTERED GRID FOR EDUCATION, OIL, TRAIN === */
 .industry {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
   padding: 2rem;
   text-align: center;
 }
 
 .industry-item {
-  margin-bottom: 3rem;
+  max-width: 300px;
+  flex: 1 1 300px;
 }
 
 .industry-item img {
-  max-width: 400px;
   width: 100%;
   height: auto;
-  margin: 0 auto 1rem;
-  display: block;
   border-radius: 10px;
+  margin-bottom: 0.8rem;
 }
 
 .industry-item h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #3A8B87;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .industry-item p {
-  max-width: 600px;
-  margin: 0 auto;
+  font-size: 0.95rem;
   color: #333333;
-  font-size: 1rem;
 }
 
 /* === DIRECTORY VIEW TOGGLE === */
