@@ -262,3 +262,13 @@ nav a.active {
   margin: 0.5rem auto;
   display: block;
 }
+.join-section {
+  text-align: center;
+}
+
+.join-highlight .join-img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
+}
