@@ -68,7 +68,7 @@ nav a.active {
   filter: brightness(1.03) contrast(1.05);
 }
 
-/* === INDUSTRY SECTION: GRID CARDS === */
+/* === INDUSTRY SECTION === */
 .industry {
   display: flex;
   flex-wrap: wrap;
@@ -103,6 +103,18 @@ nav a.active {
 .industry-item p {
   font-size: 0.95rem;
   color: #333333;
+}
+
+/* === WHY MINOT SECTION === */
+.why-minot {
+  text-align: center;
+  padding: 2rem;
+}
+
+.why-minot ul {
+  list-style-position: inside;
+  display: inline-block;
+  text-align: left;
 }
 
 /* === DIRECTORY VIEW TOGGLE === */
@@ -170,7 +182,7 @@ nav a.active {
 
 .gold { border-left-color: gold; }
 .silver { border-left-color: silver; }
-basic { border-left-color: #888888; }
+.basic { border-left-color: #888888; }
 
 /* === COURSE LIST === */
 .courses {
@@ -273,20 +285,7 @@ form button:hover {
   background-color: #2f6d6a;
 }
 
-/* === TESTIMONIALS === */
-.testimonial {
-  background-color: #ffffff;
-}
-
-.testimonial h2 {
-  color: #3A8B87;
-}
-
-.spotlight-description p {
-  color: #444444;
-}
-
-/* === NEW DISCOVER PAGE SECTIONS === */
+/* === WEATHER SECTION === */
 .weather {
   background-color: #ffffff;
   color: #333333;
@@ -306,6 +305,7 @@ form button:hover {
   font-size: 1rem;
 }
 
+/* === OTHER SECTIONS (DISCOVER PAGE) === */
 .cost-of-living,
 .local-news {
   background-color: #ffffff;
