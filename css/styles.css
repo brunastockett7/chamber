@@ -1,12 +1,21 @@
+/* === GLOBAL STYLES === */
+body {
+  background-color: #F5EFE6;
+  color: #222222;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 /* === HEADER STYLING === */
 header {
-  background-color: #1a1a1a;
+  background-color: #F5EFE6;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border-bottom: 1px solid #444444;
+  border-bottom: 1px solid #ccc;
 }
 
 .logo {
@@ -18,7 +27,7 @@ header {
 
 h1 {
   font-size: 1.8rem;
-  color: #39FF14;
+  color: #3A8B87;
   margin-bottom: 1rem;
 }
 
@@ -35,7 +44,7 @@ nav ul {
 nav a {
   text-decoration: none;
   font-weight: 600;
-  color: #39FF14;
+  color: #3A8B87;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -43,7 +52,8 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  background-color: #BB00FF;
+  background-color: #D9A273;
+  color: #fff;
 }
 
 /* === HERO IMAGE === */
@@ -58,6 +68,33 @@ nav a.active {
   filter: brightness(1.03) contrast(1.05);
 }
 
+/* === FEATURE PHOTO SECTION === */
+.feature-photo {
+  text-align: center;
+  padding: 2rem;
+}
+
+.feature-photo img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.feature-text h2 {
+  margin-top: 0.5rem;
+  font-size: 1.8rem;
+  color: #3A8B87;
+}
+
+.feature-text p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #333333;
+}
+
 /* === DIRECTORY VIEW TOGGLE === */
 .view-toggle {
   margin: 1rem 0;
@@ -65,25 +102,26 @@ nav a.active {
 }
 
 .view-toggle button {
-  background-color: #BB00FF;
+  background-color: #3A8B87;
+  color: white;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   margin: 0 0.5rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.3s ease;
 }
 
 .view-toggle button:hover {
-  background-color: #A020F0;
+  background-color: #2f6d6a;
 }
 
 /* === DIRECTORY MEMBERS === */
 #memberContainer {
   display: grid;
   gap: 1rem;
-  background-color: #222222;
+  background-color: transparent;
   padding: 2rem;
   border-radius: 10px;
 }
@@ -101,12 +139,13 @@ nav a.active {
 }
 
 .member-card {
-  background-color: #1e1e1e;
+  background-color: #ffffff;
+  color: #222222;
   padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  border-left: 5px solid #444444;
+  border-left: 5px solid #3A8B87;
 }
 
 .member-card img {
@@ -121,11 +160,11 @@ nav a.active {
 
 .gold { border-left-color: gold; }
 .silver { border-left-color: silver; }
-.basic { border-left-color: #666666; }
+.basic { border-left-color: #888888; }
 
 /* === COURSE LIST === */
 .courses {
-  background-color: #1a1a1a;
+  background-color: #fff;
   padding: 2rem;
   border-radius: 10px;
   margin-top: 2rem;
@@ -139,7 +178,7 @@ nav a.active {
 }
 
 .course-card {
-  background-color: #222222;
+  background-color: #fff;
   padding: 1rem;
   border-radius: 8px;
   width: 200px;
@@ -154,66 +193,34 @@ nav a.active {
 .course-card h3 {
   margin-top: 0;
   font-size: 1.1rem;
-  color: #39FF14;
+  color: #3A8B87;
 }
 
 .course-card p {
   margin: 0.2rem 0;
   font-size: 0.95rem;
-  color: #DDDDDD;
-}
-
-/* === DISCOVER PAGE === */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-  background-color: #121212;
-  border-radius: 10px;
-}
-
-.gallery figure {
-  background-color: #222222;
-  border-radius: 8px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin: 0;
-}
-
-.gallery img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-}
-
-.gallery figcaption {
-  padding: 1rem;
-  font-size: 0.95rem;
-  color: #BB00FF;
+  color: #444444;
 }
 
 /* === JOIN PAGE === */
 .join-section {
   text-align: center;
   padding: 2rem;
-  background-color: #222222;
+  background-color: #ffffff;
   border-radius: 10px;
 }
 
 .join-section h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #39FF14;
+  color: #3A8B87;
 }
 
 .join-section p {
   max-width: 600px;
   margin: 0 auto 1.5rem;
   font-size: 1rem;
-  color: #DDDDDD;
+  color: #333333;
 }
 
 .join-img {
@@ -225,8 +232,8 @@ nav a.active {
 }
 
 .cta-button {
-  background-color: #39FF14;
-  color: black;
+  background-color: #3A8B87;
+  color: white;
   padding: 0.5rem 1.2rem;
   text-decoration: none;
   border-radius: 6px;
@@ -237,52 +244,52 @@ nav a.active {
 
 /* === FORM === */
 form label {
-  color: #39FF14;
+  color: #3A8B87;
 }
 
 form input {
-  background-color: #1a1a1a;
-  color: white;
-  border: 1px solid #BB00FF;
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #3A8B87;
 }
 
 form button {
-  background-color: #39FF14;
-  color: black;
+  background-color: #3A8B87;
+  color: white;
 }
 
 form button:hover {
-  background-color: #6cff6c;
+  background-color: #2f6d6a;
 }
 
 /* === TESTIMONIALS === */
 .testimonial {
-  background-color: #1a1a1a;
+  background-color: #fff;
 }
 
 .testimonial h2 {
-  color: #39FF14;
+  color: #3A8B87;
 }
 
 .spotlight-description p {
-  color: #DDDDDD;
+  color: #444444;
 }
 
 /* === NEW DISCOVER PAGE SECTIONS === */
 .weather, .cost-of-living, .local-news {
-  background-color: #121212;
-  color: #DDDDDD;
+  background-color: #ffffff;
+  color: #333333;
 }
 
 .weather h2, .cost-of-living h2, .local-news h2 {
-  color: #39FF14;
+  color: #3A8B87;
 }
 
 .cost-of-living a, .local-news a {
-  color: #BB00FF;
+  color: #3A8B87;
 }
 
 .cost-of-living a:hover, .local-news a:hover {
-  color: #AAFFAA;
+  color: #D9A273;
 }
 
