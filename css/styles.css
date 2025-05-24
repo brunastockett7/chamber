@@ -95,6 +95,38 @@ nav a.active {
   color: #333333;
 }
 
+/* === INDUSTRY SECTION IMAGES === */
+.industry {
+  padding: 2rem;
+  text-align: center;
+}
+
+.industry-item {
+  margin-bottom: 3rem;
+}
+
+.industry-item img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 1rem;
+  display: block;
+  border-radius: 10px;
+}
+
+.industry-item h3 {
+  font-size: 1.5rem;
+  color: #3A8B87;
+  margin-bottom: 0.5rem;
+}
+
+.industry-item p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #333333;
+  font-size: 1rem;
+}
+
 /* === DIRECTORY VIEW TOGGLE === */
 .view-toggle {
   margin: 1rem 0;
@@ -164,7 +196,7 @@ nav a.active {
 
 /* === COURSE LIST === */
 .courses {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 2rem;
   border-radius: 10px;
   margin-top: 2rem;
@@ -178,7 +210,7 @@ nav a.active {
 }
 
 .course-card {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 1rem;
   border-radius: 8px;
   width: 200px;
@@ -248,8 +280,8 @@ form label {
 }
 
 form input {
-  background-color: #fff;
-  color: #222;
+  background-color: #ffffff;
+  color: #222222;
   border: 1px solid #3A8B87;
 }
 
@@ -264,7 +296,7 @@ form button:hover {
 
 /* === TESTIMONIALS === */
 .testimonial {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .testimonial h2 {
@@ -292,4 +324,3 @@ form button:hover {
 .cost-of-living a:hover, .local-news a:hover {
   color: #D9A273;
 }
-
