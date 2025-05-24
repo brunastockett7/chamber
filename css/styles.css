@@ -56,273 +56,38 @@ nav a.active {
   color: #fff;
 }
 
-/* === HERO IMAGE === */
-.hero-img {
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  image-rendering: auto;
-  filter: brightness(1.03) contrast(1.05);
+/* === GALLERY CENTERING === */
+.gallery {
+  text-align: center;
+  padding: 2rem;
 }
 
-/* === INDUSTRY SECTION === */
-.industry {
+.gallery-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  padding: 2rem;
-  text-align: center;
 }
 
-.industry-item {
-  background-color: #ffffff;
-  padding: 1rem;
-  border-radius: 10px;
-  max-width: 280px;
-  width: 100%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-.industry-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 0.8rem;
-}
-
-.industry-item h3 {
-  font-size: 1.3rem;
-  color: #3A8B87;
-  margin-bottom: 0.4rem;
-}
-
-.industry-item p {
-  font-size: 0.95rem;
-  color: #333333;
-}
-
-/* === WHY MINOT SECTION === */
-.why-minot {
-  text-align: center;
-  padding: 2rem;
-}
-
-.why-minot ul {
-  list-style-position: inside;
-  display: inline-block;
-  text-align: left;
-}
-
-/* === DIRECTORY VIEW TOGGLE === */
-.view-toggle {
-  margin: 1rem 0;
-  text-align: center;
-}
-
-.view-toggle button {
-  background-color: #3A8B87;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  margin: 0 0.5rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.view-toggle button:hover {
-  background-color: #2f6d6a;
-}
-
-/* === DIRECTORY MEMBERS === */
-#memberContainer {
-  display: grid;
-  gap: 1rem;
-  background-color: transparent;
-  padding: 2rem;
-  border-radius: 10px;
-}
-
-.grid-view {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.list-view {
-  display: block;
-}
-
-.list-view .member-card img {
-  display: none;
-}
-
-.member-card {
-  background-color: #ffffff;
-  color: #222222;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  border-left: 5px solid #3A8B87;
-}
-
-.member-card img {
-  width: 100%;
-  max-width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin: 0 auto 0.5rem;
-  display: block;
-}
-
-.gold { border-left-color: gold; }
-.silver { border-left-color: silver; }
-.basic { border-left-color: #888888; }
-
-/* === COURSE LIST === */
-.courses {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 10px;
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.course-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.course-card {
-  background-color: #ffffff;
-  padding: 1rem;
-  border-radius: 8px;
-  width: 200px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-}
-
-.course-card:hover {
-  transform: translateY(-5px);
-}
-
-.course-card h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
-  color: #3A8B87;
-}
-
-.course-card p {
-  margin: 0.2rem 0;
-  font-size: 0.95rem;
-  color: #444444;
-}
-
-/* === JOIN PAGE === */
-.join-section {
-  text-align: center;
-  padding: 2rem;
-  background-color: #ffffff;
-  border-radius: 10px;
-}
-
-.join-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #3A8B87;
-}
-
-.join-section p {
-  max-width: 600px;
-  margin: 0 auto 1.5rem;
-  font-size: 1rem;
-  color: #333333;
-}
-
-.join-img {
+.gallery figure {
   width: 250px;
-  height: auto;
+}
+
+.gallery img {
+  width: 100%;
   border-radius: 8px;
-  margin: 1rem auto;
-  display: block;
 }
 
-.cta-button {
-  background-color: #3A8B87;
-  color: white;
-  padding: 0.5rem 1.2rem;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 1rem;
+.gallery figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #444;
 }
 
-/* === FORM === */
-form label {
-  color: #3A8B87;
-}
-
-form input {
-  background-color: #ffffff;
-  color: #222222;
-  border: 1px solid #3A8B87;
-}
-
-form button {
-  background-color: #3A8B87;
-  color: white;
-}
-
-form button:hover {
-  background-color: #2f6d6a;
-}
-
-/* === WEATHER SECTION === */
-.weather {
-  background-color: #ffffff;
-  color: #333333;
-  text-align: center;
-  padding: 2rem;
-}
-
-.weather h2 {
-  color: #3A8B87;
-  margin-bottom: 0.5rem;
-}
-
-#temperature,
-#description,
-#forecast {
-  margin: 0.3rem 0;
-  font-size: 1rem;
-}
-
-/* === OTHER SECTIONS (DISCOVER PAGE) === */
+/* === CENTERED TEXT FOR DISCOVER SECTIONS === */
+.about,
 .cost-of-living,
 .local-news {
-  background-color: #ffffff;
-  color: #333333;
-}
-
-.cost-of-living h2,
-.local-news h2 {
-  color: #3A8B87;
-}
-
-.cost-of-living a,
-.local-news a {
-  color: #3A8B87;
-}
-
-.cost-of-living a:hover,
-.local-news a:hover {
-  color: #D9A273;
+  text-align: center;
+  padding: 2rem;
 }
