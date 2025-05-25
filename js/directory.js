@@ -33,12 +33,18 @@ function displayMembers(members) {
     }
 
     const membershipName = getMembershipName(member.membershipLevel);
-
     card.setAttribute('tabindex', '0');
     card.setAttribute('aria-label', `${member.name}, ${membershipName} Member`);
 
-    card.innerHTML = `
-      <img src="${member.image}" alt="Logo of ${member.name}" loading="lazy">
+    // Create image element
+    const img = document.createElement('img');
+    img.src = member.image;
+    img.alt = `Logo of ${member.name}`;
+    img.loading = 'lazy';
+
+    // Create info block and wrap text content
+    const info = document.createElement('div');
+    info.innerHTML = `
       <h3>${member.name}</h3>
       <p>${member.address || ''}</p>
       <p>${member.phone || ''}</p>
@@ -50,6 +56,9 @@ function displayMembers(members) {
       <p class="membership">Membership Level: ${membershipName}</p>
     `;
 
+    // Append both image and info to card
+    card.appendChild(img);
+    card.appendChild(info);
     container.appendChild(card);
   });
 }
