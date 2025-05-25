@@ -1,9 +1,8 @@
-
 // spotlight.js
 document.addEventListener("DOMContentLoaded", () => {
   const spotlightContainer = document.getElementById("spotlight");
 
-  fetch("../data/members.json")
+  fetch("data/members.json")
     .then(response => {
       if (!response.ok) {
         throw new Error("Failed to fetch spotlight members.");
@@ -11,17 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.json();
     })
     .then(data => {
-      // Filter for Gold (3) and Silver (2) members
       const featuredMembers = data.filter(member =>
         member.membershipLevel === 3 || member.membershipLevel === 2
       );
 
-      // Shuffle and take 2–3 random members
       const selected = featuredMembers
         .sort(() => 0.5 - Math.random())
         .slice(0, 3);
 
-      // Create cards
       selected.forEach(member => {
         const card = document.createElement("div");
         card.classList.add("spotlight-card");
