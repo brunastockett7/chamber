@@ -1,32 +1,77 @@
+/* eslint-env browser */
+/* global document, fetch, console */
 
-// === WEATHER FETCH FUNCTION ===
-async function fetchWeather() {
-  const weatherDiv = document.getElementById('weatherData');
+document.addEventListener("DOMContentLoaded", () => {
+  const spotlightContainer = document.getElementById("spotlight");
 
-  if (!weatherDiv) return;
-
-  try {
-    const response = await fetch(
-      'https://api.open-meteo.com/v1/forecast?latitude=48.2325&longitude=-101.2963&current_weather=true'
-    );
-
-    if (!response.ok) {
-      throw new Error('Weather fetch failed');
-    }
-
-    const data = await response.json();
-    const weather = data.current_weather;
-
-    weatherDiv.innerHTML = `
-      <p aria-label="Current temperature">🌡️ Temperature: ${weather.temperature}°C</p>
-      <p aria-label="Wind speed">🌬️ Wind Speed: ${weather.windspeed} km/h</p>
-      <p aria-label="Weather code">🌦️ Weather Code: ${weather.weathercode}</p>
-      <p aria-label="Data time">🕒 Time: ${new Date(weather.time).toLocaleString()}</p>
-    `;
-  } catch (error) {
-    weatherDiv.textContent = 'Unable to load weather data.';
-    console.error('Error fetching weather:', error);
+  if (!spotlightContainer) {
+    console.warn("Spotlight container not found.");
+    return;
   }
-}
 
-document.addEventListener('DOMContentLoaded', fetchWeather);
+  fetch("data/members.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch spotlight members.");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const featuredMembers = data.filter(
+        (member) => member.membershipLevel === 3 || member.membershipLevel === 2
+      );
+
+      const selected = featuredMembers
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 3);
+
+      selected.forEach((member) => {
+        const card = document.createElement("div");
+        card.className = "spotlight-card";
+
+        const image = document.createElement("img");
+        image.src = member.image;
+        image.alt = `Logo of ${member.name}`;
+        image.loading = "lazy";
+
+        const info = document.createElement("div");
+        info.className = "spotlight-info";
+
+        const name = document.createElement("h3");
+        name.textContent = member.name;
+
+        const address = document.createElement("p");
+        address.textContent = member.address || "";
+
+        const phone = document.createElement("p");
+        phone.textContent = member.phone || "";
+
+        const website = member.website
+          ? document.createElement("a")
+          : document.createElement("p");
+
+        if (member.website) {
+          website.href = member.website;
+          website.target = "_blank";
+          website.rel = "noopener";
+          website.textContent = "Visit Website";
+        } else {
+          website.textContent = "No website available";
+        }
+
+        info.appendChild(name);
+        info.appendChild(address);
+        info.appendChild(phone);
+        info.appendChild(website);
+
+        card.appendChild(image);
+        card.appendChild(info);
+
+        spotlightContainer.appendChild(card);
+      });
+    })
+    .catch((error) => {
+      console.error("Spotlight Error:", error);
+      spotlightContainer.innerHTML = "<p>Error loading spotlight members.</p>";
+    });
+});

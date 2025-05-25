@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Discover - Minot Chamber</title>
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <img src="../images/minot-logo.jpg" alt="Minot Chamber Logo" class="logo" />
+    <img src="../images/minot-logo.jpg" alt="Minot Chamber Logo" class="logo">
     <h1>Minot Chamber of Commerce</h1>
     <nav>
       <ul aria-label="Main site navigation">
@@ -37,15 +37,15 @@
       <h2>Popular Places</h2>
       <div class="gallery-row">
         <figure>
-          <img src="../images/minot-air-show.jpg" alt="Minot Air Show" loading="lazy" />
+          <img src="../images/minot-air-show.jpg" alt="Minot Air Show" loading="lazy">
           <figcaption>Exciting aerial displays during Minot’s air show.</figcaption>
         </figure>
         <figure>
-          <img src="../images/oak-park.jpg" alt="Oak Park" loading="lazy" />
+          <img src="../images/oak-park.jpg" alt="Oak Park" loading="lazy">
           <figcaption>Relax and unwind in the calm of Oak Park.</figcaption>
         </figure>
         <figure>
-          <img src="../images/scandinavian-park.jpg" alt="Scandinavian Park" loading="lazy" />
+          <img src="../images/scandinavian-park.jpg" alt="Scandinavian Park" loading="lazy">
           <figcaption>Explore Minot’s Scandinavian roots at this cultural site.</figcaption>
         </figure>
       </div>
@@ -92,7 +92,6 @@
         if (!response.ok) throw new Error('Weather fetch failed');
         const data = await response.json();
         const weather = data.current_weather;
-
         weatherDiv.innerHTML = `
           <p>Temperature: ${weather.temperature}°C</p>
           <p>Wind Speed: ${weather.windspeed} km/h</p>
@@ -109,7 +108,5 @@
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
   </script>
-
-  <script src="../js/script.js"></script>
 </body>
 </html>
