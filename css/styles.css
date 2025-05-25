@@ -339,3 +339,28 @@ basic { border-left-color: #888888; }
 .spotlight-info a:hover {
   text-decoration: underline;
 }
+.spotlight-section {
+  background-color: #f5efe6;
+  padding: 2rem;
+  text-align: center;
+}
+
+.spotlight-card {
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  max-width: 250px;
+  background-color: #fff;
+}
+
+.spotlight-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.spotlight-info {
+  margin-top: 1rem;
+}
