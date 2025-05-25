@@ -148,7 +148,7 @@ nav a.active {
 
 .gold { border-left-color: #ccc; }
 .silver { border-left-color: silver; }
-.basic { border-left-color: #888888; }
+basic { border-left-color: #888888; }
 
 /* === WEATHER SECTION === */
 .weather {

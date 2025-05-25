@@ -42,7 +42,7 @@ function displayMembers(members) {
     img.alt = `Logo of ${member.name}`;
     img.loading = 'lazy';
 
-    // Info container
+    // Info block
     const info = document.createElement('div');
     info.innerHTML = `
       <h3>${member.name}</h3>
@@ -62,14 +62,13 @@ function displayMembers(members) {
   });
 }
 
-// Fetch member data from JSON
+// Fetch members from JSON
 async function getMembers() {
   if (!container) return;
 
   try {
     const response = await fetch('../data/members.json');
     if (!response.ok) throw new Error('Failed to fetch member data');
-
     const data = await response.json();
     displayMembers(data);
   } catch (error) {
@@ -78,7 +77,7 @@ async function getMembers() {
   }
 }
 
-// Toggle View Buttons
+// Toggle views
 if (gridBtn && listBtn && container) {
   gridBtn.addEventListener('click', () => {
     container.classList.add('grid-view');
@@ -91,5 +90,6 @@ if (gridBtn && listBtn && container) {
   });
 }
 
-// Load members on page load
+// Load members on DOM ready
 document.addEventListener('DOMContentLoaded', getMembers);
+
