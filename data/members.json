@@ -4,7 +4,7 @@
     "address": "123 Main St, Minot, ND",
     "phone": "(701) 555-1234",
     "website": "https://www.minotsdailybread.com/",
-    "image": "../images/daily-bread.jpg",
+    "image": "/wdd231/images/daily-bread.jpg",
     "membershipLevel": 3,
     "membership": "Gold"
   },
@@ -12,8 +12,8 @@
     "name": "North Plains Fitness",
     "address": "456 Oak Ave, Minot, ND",
     "phone": "(701) 555-5678",
-    "website": "https://www.bing.com/search?q=north+plains+fitness&cvid=5d837b710bba47ae8b4bedd87c53f7fe&gs_lcrp=EgRlZGdlKgYIARBFGDsyBggAEEUYOTIGCAEQRRg7MgYIAhAuGEAyBggDEEUYOzIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAuGEDSAQg0OTgyajBqOagCCLACAQ&FORM=ANAB01&PC=LCTS",
-    "image": "../images/fitness.jpg",
+    "website": "https://www.bing.com/search?q=north+plains+fitness",
+    "image": "/wdd231/images/fitness.jpg",
     "membershipLevel": 2,
     "membership": "Silver"
   },
@@ -22,7 +22,7 @@
     "address": "789 Tech Blvd, Minot, ND",
     "phone": "(701) 555-9012",
     "website": "",
-    "image": "../images/dakota-tech.jpg",
+    "image": "/wdd231/images/dakota-tech.jpg",
     "membershipLevel": 1,
     "membership": "Bronze"
   },
@@ -31,7 +31,7 @@
     "address": "321 Garden St, Minot, ND",
     "phone": "(701) 555-3456",
     "website": "",
-    "image": "../images/greenleaf.jpg",
+    "image": "/wdd231/images/greenleaf.jpg",
     "membershipLevel": 2,
     "membership": "Silver"
   },
@@ -39,8 +39,8 @@
     "name": "Grace Studio",
     "address": "654 Harmony Rd, Minot, ND",
     "phone": "(701) 555-7890",
-    "website": "https://www.bing.com/search?q=grace+studio+minot+nd&cvid=60824fc9039146e6a3a72fa2e010eb7b&gs_lcrp=EgRlZGdlKgYIABBFGDsyBggAEEUYOzIGCAEQABhAMgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEEUYPDIGCAcQRRg8MgYICBBFGDzSAQg1OTM2ajBqNKgCALACAA&FORM=ANAB01&PC=LCTS",
-    "image": "../images/grace-studio.jpg",
+    "website": "https://www.bing.com/search?q=grace+studio+minot+nd",
+    "image": "/wdd231/images/grace-studio.jpg",
     "membershipLevel": 3,
     "membership": "Gold"
   },
@@ -49,7 +49,7 @@
     "address": "888 Auto Ln, Minot, ND",
     "phone": "(701) 555-2468",
     "website": "https://carcareexpressanddavesdiesel.com/",
-    "image": "../images/car-care.jpg",
+    "image": "/wdd231/images/car-care.jpg",
     "membershipLevel": 1,
     "membership": "Bronze"
   },
@@ -58,7 +58,7 @@
     "address": "999 Flower Blvd, Minot, ND",
     "phone": "(701) 555-6789",
     "website": "",
-    "image": "../images/studio-bloom.jpg",
+    "image": "/wdd231/images/studio-bloom.jpg",
     "membershipLevel": 2,
     "membership": "Silver"
   }
