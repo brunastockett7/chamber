@@ -160,7 +160,7 @@ nav a.active {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* View Toggle Buttons */
+/* === TOGGLE BUTTONS === */
 .directory-controls {
   text-align: center;
   margin: 1rem 0;
@@ -180,7 +180,7 @@ nav a.active {
   background-color: #2f6f69;
 }
 
-/* Medal Icon */
+/* === MEDAL === */
 .medal {
   width: 30px;
   height: auto;
@@ -188,7 +188,7 @@ nav a.active {
   margin: 0.5rem auto;
 }
 
-/* === GRID VIEW (unchanged) === */
+/* === GRID VIEW === */
 #directory.grid-view {
   display: flex;
   flex-wrap: wrap;
@@ -201,7 +201,7 @@ nav a.active {
   text-align: center;
 }
 
-/* === JOIN STYLES === */
+/* === JOIN SECTION === */
 .join-section {
   text-align: center;
 }
@@ -230,7 +230,7 @@ nav a.active {
   margin: 1rem auto;
 }
 
-/* === LIST VIEW ONLY FIX: VERTICAL STACKED CARDS, CENTERED === */
+/* === LIST VIEW FIXED & CENTERED === */
 #memberContainer.list-view {
   display: flex;
   flex-direction: column;
@@ -243,11 +243,15 @@ nav a.active {
   align-items: center;
   justify-content: flex-start;
   gap: 1.5rem;
-  text-align: left;
-  padding: 1rem;
+  padding: 1.5rem;
   border-bottom: 1px solid #ccc;
-  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   max-width: 800px;
+  width: 100%;
+  text-align: left;
   box-sizing: border-box;
 }
 
@@ -257,6 +261,7 @@ nav a.active {
   object-fit: cover;
   border-radius: 6px;
   flex-shrink: 0;
+  margin-bottom: 0;
 }
 
 .list-view .member-card div {
