@@ -1,6 +1,6 @@
 /* eslint-env browser */
 
-// === FOOTER DATE DISPLAY ===
+/* global document, fetch, console */
 const year = document.getElementById('year');
 const lastModified = document.getElementById('lastModified');
 
