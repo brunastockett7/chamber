@@ -1,7 +1,7 @@
 /* eslint-env browser */
 
 // Get DOM elements
-const container = document.getElementById('memberContainer');
+const container = document.getElementById('directory');
 const gridBtn = document.getElementById('gridBtn');
 const listBtn = document.getElementById('listBtn');
 
@@ -20,7 +20,7 @@ function displayMembers(members) {
     const card = document.createElement('div');
     card.classList.add('member-card');
 
-    // Add membership level class for styling
+    // Add membership level class
     switch (member.membershipLevel) {
       case 3:
         card.classList.add('gold');
@@ -36,13 +36,13 @@ function displayMembers(members) {
     card.setAttribute('tabindex', '0');
     card.setAttribute('aria-label', `${member.name}, ${membershipName} Member`);
 
-    // Create image element
+    // Image
     const img = document.createElement('img');
     img.src = member.image;
     img.alt = `Logo of ${member.name}`;
     img.loading = 'lazy';
 
-    // Create info block and wrap text content
+    // Info container
     const info = document.createElement('div');
     info.innerHTML = `
       <h3>${member.name}</h3>
@@ -56,7 +56,6 @@ function displayMembers(members) {
       <p class="membership">Membership Level: ${membershipName}</p>
     `;
 
-    // Append both image and info to card
     card.appendChild(img);
     card.appendChild(info);
     container.appendChild(card);
@@ -69,9 +68,7 @@ async function getMembers() {
 
   try {
     const response = await fetch('../data/members.json');
-    if (!response.ok) {
-      throw new Error('Failed to fetch member data');
-    }
+    if (!response.ok) throw new Error('Failed to fetch member data');
 
     const data = await response.json();
     displayMembers(data);
@@ -81,7 +78,7 @@ async function getMembers() {
   }
 }
 
-// View toggle buttons
+// Toggle View Buttons
 if (gridBtn && listBtn && container) {
   gridBtn.addEventListener('click', () => {
     container.classList.add('grid-view');
@@ -94,5 +91,5 @@ if (gridBtn && listBtn && container) {
   });
 }
 
-// Run fetch on load
+// Load members on page load
 document.addEventListener('DOMContentLoaded', getMembers);
