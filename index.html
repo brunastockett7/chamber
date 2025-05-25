@@ -75,11 +75,18 @@
       <p>Summer Market Kickoff – June 20, 10:00 AM</p>
     </section>
 
-    <section class="weather">
-      <h2>Weather</h2>
-      <p id="temperature">72°F</p>
-      <p id="description">Partly Cloudy</p>
-      <div id="forecast">Tomorrow: High 76°F, Low 58°F</div>
+    <section class="weather" aria-live="polite">
+      <h2>Current Weather</h2>
+      <div id="weatherData">
+        <p>Loading weather information...</p>
+      </div>
+    </section>
+
+    <section class="spotlight" aria-label="Member Spotlight">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight" class="spotlight-container">
+        <!-- Spotlight members will be injected here by spotlight.js -->
+      </div>
     </section>
 
     <section class="courses">
@@ -103,5 +110,6 @@
   <script src="js/courses.js"></script>
   <script src="js/script.js"></script>
   <script src="js/weather.js"></script>
+  <script src="js/spotlight.js"></script>
 </body>
 </html>
