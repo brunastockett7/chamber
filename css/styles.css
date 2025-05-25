@@ -188,7 +188,7 @@ nav a.active {
   margin: 0.5rem auto;
 }
 
-/* Grid and List Layouts */
+/* === GRID VIEW (unchanged) === */
 #directory.grid-view {
   display: flex;
   flex-wrap: wrap;
@@ -230,7 +230,7 @@ nav a.active {
   margin: 1rem auto;
 }
 
-/* === FIXED LIST VIEW CENTERED ALIGNMENT === */
+/* === LIST VIEW ONLY FIX: VERTICAL STACKED CARDS, CENTERED === */
 #memberContainer.list-view {
   display: flex;
   flex-direction: column;
@@ -239,14 +239,16 @@ nav a.active {
 
 .list-view .member-card {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   gap: 1.5rem;
   text-align: left;
   padding: 1rem;
   border-bottom: 1px solid #ccc;
-  max-width: 800px;
   width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
 }
 
 .list-view .member-card img {
@@ -254,6 +256,7 @@ nav a.active {
   height: 100px;
   object-fit: cover;
   border-radius: 6px;
+  flex-shrink: 0;
 }
 
 .list-view .member-card div {
