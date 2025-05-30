@@ -42,17 +42,16 @@
   <script>
     // Function to get URL parameters
     function getQueryParams() {
-      const params = {};
-      window.location.search
-        .substring(1)
-        .split("&")
-        .forEach(pair => {
-          const [key, value] = pair.split("=");
-          params[key] = decodeURIComponent(value.replace(/\+/g, " "));
-        });
-      return params;
-    }
-
+  const params = {};
+  window.location.search
+    .substring(1)
+    .split("&")
+    .forEach(pair => {
+      const [key, value] = pair.split("=");
+      params[key] = decodeURIComponent(value.replace(/\+/g, " "));
+    });
+  return params;
+}
     document.addEventListener("DOMContentLoaded", () => {
       const params = getQueryParams();
       const infoDiv = document.getElementById("submitted-info");
