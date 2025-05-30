@@ -95,6 +95,99 @@
       </div>
     </section>
   </main>
+<!-- Gold Membership Modal -->
+<div id="modal-gold" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-gold-title" aria-hidden="true" tabindex="-1">
+  <div class="modal-content">
+    <h3 id="modal-gold-title">Gold Membership Benefits</h3>
+    <p>Priority access to events, featured listings, exclusive networking, and more.</p>
+    <button class="modal-close" aria-label="Close Gold membership benefits modal">Close</button>
+  </div>
+</div>
+
+<!-- Silver Membership Modal -->
+<div id="modal-silver" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-silver-title" aria-hidden="true" tabindex="-1">
+  <div class="modal-content">
+    <h3 id="modal-silver-title">Silver Membership Benefits</h3>
+    <p>Access to networking events, business workshops, and member discounts.</p>
+    <button class="modal-close" aria-label="Close Silver membership benefits modal">Close</button>
+  </div>
+</div>
+
+<!-- Bronze Membership Modal -->
+<div id="modal-bronze" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-bronze-title" aria-hidden="true" tabindex="-1">
+  <div class="modal-content">
+    <h3 id="modal-bronze-title">Bronze Membership Benefits</h3>
+    <p>Newsletter access, business resources, and community updates.</p>
+    <button class="modal-close" aria-label="Close Bronze membership benefits modal">Close</button>
+  </div>
+</div>
+  <!-- Your other scripts -->
+  <script src="../js/form.js"></script>
+  <script src="../js/script.js"></script>
+
+  <!-- Add this script here -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Fill hidden timestamp field with current ISO date
+      const timestampInput = document.getElementById("timestamp");
+      if (timestampInput) timestampInput.value = new Date().toISOString();
+
+      // Modal open and close logic
+      const modalButtons = document.querySelectorAll(".membership-benefits-buttons button");
+
+      modalButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          const modalId = button.getAttribute("data-modal");
+          const modal = document.getElementById(modalId);
+          if (!modal) return;
+
+          modal.setAttribute("aria-hidden", "false");
+          modal.querySelector(".modal-close").focus();
+
+          // Trap keyboard focus inside modal
+          const focusableElements = modal.querySelectorAll(
+            "button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])"
+          );
+          const firstEl = focusableElements[0];
+          const lastEl = focusableElements[focusableElements.length - 1];
+
+          function trapFocus(e) {
+            if (e.key === "Tab") {
+              if (e.shiftKey) {
+                if (document.activeElement === firstEl) {
+                  e.preventDefault();
+                  lastEl.focus();
+                }
+              } else {
+                if (document.activeElement === lastEl) {
+                  e.preventDefault();
+                  firstEl.focus();
+                }
+              }
+            }
+            if (e.key === "Escape") {
+              closeModal();
+            }
+          }
+
+          modal.addEventListener("keydown", trapFocus);
+
+          function closeModal() {
+            modal.setAttribute("aria-hidden", "true");
+            button.focus();
+            modal.removeEventListener("keydown", trapFocus);
+          }
+
+          modal.querySelector(".modal-close").addEventListener("click", closeModal);
+
+          modal.addEventListener("click", (e) => {
+            if (e.target === modal) closeModal();
+          });
+        });
+      });
+    });
+  </script>
+</body>
 
   <footer>
     <p>&copy; <span id="year"></span> Minot Chamber of Commerce | Last Modified: <span id="lastModified"></span></p>
