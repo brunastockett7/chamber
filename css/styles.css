@@ -513,3 +513,8 @@ basic { border-left-color: #888888; }
 .thankyou-container a:hover {
   background-color: #641029;
 }
+nav a[href="thankyou.html"] {
+  display: inline !important;
+  color: red !important;
+  font-weight: bold !important;
+}
