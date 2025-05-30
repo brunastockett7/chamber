@@ -379,3 +379,37 @@ basic { border-left-color: #888888; }
 .cta-btn:hover {
   background-color: #641029;
 }
+.global-social-icons {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.global-social-icons a {
+  color: #3A8B87;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.global-social-icons a:hover {
+  color: #D9A273;
+}
+.job-logo {
+  width: 60px;
+  height: auto;
+  float: right;
+  margin-left: 1rem;
+  border-radius: 6px;
+}
+.things-banner-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 8px;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marketplace - Minot Chamber</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <img src="../images/minot-logo.jpg" alt="Minot Chamber Logo" class="logo">
+    <h1>Minot Chamber of Commerce</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="marketplace.html" class="active">Marketplace</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="marketplace">
+    <section class="intro centered-section">
+      <h2>Job & Business Opportunities</h2>
+      <p>Explore current openings, local listings, and community opportunities in the Minot area.</p>
+    </section>
+
+    <!-- 🔍 Filter/Search Controls -->
+    <section class="job-controls centered-section">
+      <input type="text" id="jobSearch" placeholder="Search jobs...">
+      <select id="jobFilter">
+        <option value="all">All Types</option>
+        <option value="Full-Time">Full-Time</option>
+        <option value="Seasonal">Seasonal</option>
+        <option value="Internship">Internship</option>
+      </select>
+    </section>
+
+    <section class="opportunity-list centered-section">
+      <article class="opportunity-card" data-type="Full-Time">
+        <h3>Barista - Minot Coffee Co.</h3>
+        <p><strong>Type:</strong> Full-Time | <strong>Location:</strong> Downtown Minot</p>
+        <p>We’re looking for an energetic and friendly barista. No experience needed – just passion for coffee and people.</p>
+        <a href="#" class="cta-btn">Apply Now</a>
+      </article>
+
+      <article class="opportunity-card" data-type="Seasonal">
+        <h3>Landscaping Crew - GreenLeaf Landscaping</h3>
+        <p><strong>Type:</strong> Seasonal | <strong>Location:</strong> South Minot</p>
+        <p>Join our outdoor crew this summer! Help design and maintain beautiful gardens across the city.</p>
+        <a href="#" class="cta-btn">Apply Now</a>
+      </article>
+
+      <article class="opportunity-card" data-type="Internship">
+        <h3>Floral Intern - Studio Bloom</h3>
+        <p><strong>Type:</strong> Internship | <strong>Location:</strong> North Hill</p>
+        <p>Creative opportunity for students interested in floral design. Hands-on experience at Minot’s top floral boutique.</p>
+        <a href="#" class="cta-btn">More Info</a>
+      </article>
+    </section>
+
+    <section class="centered-section">
+      <h2>Submit an Opportunity</h2>
+      <p>Are you hiring or offering a local opportunity? <a href="mailto:info@minotchamber.org">Email us</a> the details and we’ll post it here!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Minot Chamber of Commerce | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('jobSearch');
+      const filterSelect = document.getElementById('jobFilter');
+      const jobCards = document.querySelectorAll('.opportunity-card');
+
+      function filterJobs() {
+        const searchText = searchInput.value.toLowerCase();
+        const filterValue = filterSelect.value;
+
+        jobCards.forEach(card => {
+          const text = card.innerText.toLowerCase();
+          const type = card.getAttribute('data-type');
+
+          const matchesSearch = text.includes(searchText);
+          const matchesFilter = (filterValue === 'all' || type === filterValue);
+
+          card.style.display = (matchesSearch && matchesFilter) ? 'block' : 'none';
+        });
+      }
+
+      searchInput.addEventListener('input', filterJobs);
+      filterSelect.addEventListener('change', filterJobs);
+    });
+  </script>
+</body>
+</html>
