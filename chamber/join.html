@@ -2,17 +2,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Join - Minot Chamber of Commerce</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <header>
-    <img src="../images/minot-logo.jpg" alt="Minot Chamber Logo" class="logo">
+    <img src="../images/minot-logo.jpg" alt="Minot Chamber Logo" class="logo" />
     <h1>Minot Chamber of Commerce</h1>
     <nav>
       <ul>
@@ -31,7 +31,7 @@
     <section class="join-section join-centered">
       <h2>Join Us!</h2>
       <div class="join-highlight">
-        <img src="../images/handshake.jpg" alt="Business partners shaking hands" class="join-img">
+        <img src="../images/handshake.jpg" alt="Business partners shaking hands" class="join-img" />
         <div class="join-message">
           <p>
             Joining the Minot Chamber is more than just signing up—it's investing in a thriving network
@@ -48,19 +48,19 @@
       <p>Fill out the form below to become a member of the Minot Chamber of Commerce.</p>
       <form action="thankyou.html" method="get" aria-label="Membership Application Form">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required autocomplete="name" title="Enter your full name">
+        <input type="text" id="name" name="name" required autocomplete="name" title="Enter your full name" />
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@email.com" title="Enter your email address">
+        <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@email.com" title="Enter your email address" />
 
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Enter your phone number">
+        <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Enter your phone number" />
 
         <label for="business">Business Name:</label>
-        <input type="text" id="business" name="business" autocomplete="organization" title="Enter your business name">
+        <input type="text" id="business" name="business" autocomplete="organization" title="Enter your business name" />
 
         <label for="title">Your Title:</label>
-        <input type="text" id="title" name="title" pattern="[A-Za-z\-\s]{7,}" required title="At least 7 letters, hyphens or spaces only">
+        <input type="text" id="title" name="title" pattern="[A-Za-z\-\s]{7,}" required title="At least 7 letters, hyphens or spaces only" />
 
         <label for="membership">Membership Level:</label>
         <select id="membership" name="membership" required>
@@ -70,24 +70,34 @@
           <option value="Bronze">Bronze</option>
         </select>
 
-        <input type="hidden" id="timestamp" name="timestamp">
+        <input type="hidden" id="timestamp" name="timestamp" />
 
         <button type="submit">Submit</button>
       </form>
+    </section>
+
+    <!-- Membership cards section added here -->
+    <section class="membership-levels">
+      <h2>Membership Levels & Benefits</h2>
+      <div class="membership-benefits-buttons">
+        <button data-modal="modal-gold" type="button">Gold Membership Benefits</button>
+        <button data-modal="modal-silver" type="button">Silver Membership Benefits</button>
+        <button data-modal="modal-bronze" type="button">Bronze Membership Benefits</button>
+      </div>
     </section>
 
     <section class="testimonial">
       <h2>Member Spotlights</h2>
       <div class="testimonial-container">
         <div class="spotlight-card">
-          <img src="../images/member-profile1.jpg" alt="Ashley Rivera - Owner of Grace Studio" class="spotlight-img">
+          <img src="../images/member-profile1.jpg" alt="Ashley Rivera - Owner of Grace Studio" class="spotlight-img" />
           <div class="spotlight-description">
             <p>“The Minot Chamber gave me the support and confidence to grow Grace Studio. I’ve never felt more connected.”</p>
             <p><strong>Ashley Rivera</strong> – Owner, Grace Studio</p>
           </div>
         </div>
         <div class="spotlight-card">
-          <img src="../images/member-profile.jpg" alt="Brandon Miller - Dakota Goods Co." class="spotlight-img">
+          <img src="../images/member-profile.jpg" alt="Brandon Miller - Dakota Goods Co." class="spotlight-img" />
           <div class="spotlight-description">
             <p>“Since joining the Chamber, our visibility doubled. I’ve built valuable partnerships that last.”</p>
             <p><strong>Brandon Miller</strong> – Founder, Dakota Goods Co.</p>
@@ -96,7 +106,7 @@
       </div>
     </section>
   </main>
-  
+
   <!-- Gold Membership Modal -->
   <div id="modal-gold" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-gold-title" aria-hidden="true" tabindex="-1">
     <div class="modal-content">
@@ -128,7 +138,7 @@
   <script src="../js/form.js"></script>
   <script src="../js/script.js"></script>
 
-  <!-- Add this script here -->
+  <!-- Modal open/close script -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Fill hidden timestamp field with current ISO date
@@ -192,12 +202,12 @@
   </script>
 </body>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Minot Chamber of Commerce | Last Modified: <span id="lastModified"></span></p>
-  </footer>
+<footer>
+  <p>&copy; <span id="year"></span> Minot Chamber of Commerce | Last Modified: <span id="lastModified"></span></p>
+</footer>
 
-  <script src="../js/form.js"></script>
-  <script src="../js/script.js"></script>
+<script src="../js/form.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>
 

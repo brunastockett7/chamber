@@ -556,3 +556,16 @@ nav a[href="thankyou.html"] {
 .thankyou-container a.cta-btn:hover {
   background-color: #641029;
 }
+.membership-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
