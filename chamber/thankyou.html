@@ -57,7 +57,7 @@
       const params = getQueryParams();
       const infoDiv = document.getElementById("submitted-info");
       
-   infoDiv.innerHTML = `
+infoDiv.innerHTML = `
   <p><strong>Name:</strong> ${params.name || ""}</p>
   <p><strong>Email:</strong> ${params.email || ""}</p>
   <p><strong>Phone:</strong> ${params.phone || ""}</p>
@@ -66,6 +66,7 @@
   <p><strong>Membership Level:</strong> ${params.membership || ""}</p>
   <p><strong>Submitted on:</strong> ${params.timestamp || ""}</p>
 `;
+
       document.getElementById("year").textContent = new Date().getFullYear();
       document.getElementById("lastModified").textContent = document.lastModified;
     });
