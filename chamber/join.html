@@ -15,13 +15,13 @@
     <img src="../images/minot-logo.jpg" alt="Minot Chamber Logo" class="logo">
     <h1>Minot Chamber of Commerce</h1>
     <nav>
-      <ul aria-label="Main site navigation">
-        <li><a href="../index.html">Home</a></li>
+      <ul>
+        <li><a href="../index.html" class="active">Home</a></li>
         <li><a href="discover.html">Discover</a></li>
         <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html" class="active">Join</a></li>
-        <li><a href="marketplace.html"class="active">Marketplace</a></li>
-       <li><a href="thankyou.html">Thank You</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="marketplace.html">Marketplace</a></li>
+        <li><a href="thankyou.html">Thank You</a></li>
       </ul>
     </nav>
   </header>
@@ -46,7 +46,7 @@
     <section class="join-section">
       <h2>Join the Chamber</h2>
       <p>Fill out the form below to become a member of the Minot Chamber of Commerce.</p>
-      <form action="chamber/thankyou.html" method="get" aria-label="Membership Application Form">
+      <form action="thankyou.html" method="get" aria-label="Membership Application Form">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required autocomplete="name" title="Enter your full name">
 
@@ -96,32 +96,34 @@
       </div>
     </section>
   </main>
-<!-- Gold Membership Modal -->
-<div id="modal-gold" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-gold-title" aria-hidden="true" tabindex="-1">
-  <div class="modal-content">
-    <h3 id="modal-gold-title">Gold Membership Benefits</h3>
-    <p>Priority access to events, featured listings, exclusive networking, and more.</p>
-    <button class="modal-close" aria-label="Close Gold membership benefits modal">Close</button>
+  
+  <!-- Gold Membership Modal -->
+  <div id="modal-gold" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-gold-title" aria-hidden="true" tabindex="-1">
+    <div class="modal-content">
+      <h3 id="modal-gold-title">Gold Membership Benefits</h3>
+      <p>Priority access to events, featured listings, exclusive networking, and more.</p>
+      <button class="modal-close" aria-label="Close Gold membership benefits modal">Close</button>
+    </div>
   </div>
-</div>
 
-<!-- Silver Membership Modal -->
-<div id="modal-silver" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-silver-title" aria-hidden="true" tabindex="-1">
-  <div class="modal-content">
-    <h3 id="modal-silver-title">Silver Membership Benefits</h3>
-    <p>Access to networking events, business workshops, and member discounts.</p>
-    <button class="modal-close" aria-label="Close Silver membership benefits modal">Close</button>
+  <!-- Silver Membership Modal -->
+  <div id="modal-silver" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-silver-title" aria-hidden="true" tabindex="-1">
+    <div class="modal-content">
+      <h3 id="modal-silver-title">Silver Membership Benefits</h3>
+      <p>Access to networking events, business workshops, and member discounts.</p>
+      <button class="modal-close" aria-label="Close Silver membership benefits modal">Close</button>
+    </div>
   </div>
-</div>
 
-<!-- Bronze Membership Modal -->
-<div id="modal-bronze" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-bronze-title" aria-hidden="true" tabindex="-1">
-  <div class="modal-content">
-    <h3 id="modal-bronze-title">Bronze Membership Benefits</h3>
-    <p>Newsletter access, business resources, and community updates.</p>
-    <button class="modal-close" aria-label="Close Bronze membership benefits modal">Close</button>
+  <!-- Bronze Membership Modal -->
+  <div id="modal-bronze" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-bronze-title" aria-hidden="true" tabindex="-1">
+    <div class="modal-content">
+      <h3 id="modal-bronze-title">Bronze Membership Benefits</h3>
+      <p>Newsletter access, business resources, and community updates.</p>
+      <button class="modal-close" aria-label="Close Bronze membership benefits modal">Close</button>
+    </div>
   </div>
-</div>
+
   <!-- Your other scripts -->
   <script src="../js/form.js"></script>
   <script src="../js/script.js"></script>
@@ -198,3 +200,4 @@
   <script src="../js/script.js"></script>
 </body>
 </html>
+
