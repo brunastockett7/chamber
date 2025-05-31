@@ -58,15 +58,14 @@
       const params = getQueryParams();
       const infoDiv = document.getElementById("submitted-info");
       
-    infoDiv.innerHTML = `
-  <p><strong>Name:</strong> ${params.name || ""}</p>
-  <p><strong>Email:</strong> ${params.email || ""}</p>
-  <p><strong>Phone:</strong> ${params.phone || ""}</p>
-  <p><strong>Business/Organization:</strong> ${params.business || ""}</p>
-  <p><strong>Title:</strong> ${params.title || ""}</p>
-  <p><strong>Membership Level:</strong> ${params.membership || ""}</p>
-  <p><strong>Submitted on:</strong> ${params.timestamp || ""}</p>
-`;
+      infoDiv.innerHTML = `
+        <p><strong>First Name:</strong> ${params.firstName || ""}</p>
+        <p><strong>Last Name:</strong> ${params.lastName || ""}</p>
+        <p><strong>Email:</strong> ${params.email || ""}</p>
+        <p><strong>Phone:</strong> ${params.phone || ""}</p>
+        <p><strong>Business/Organization:</strong> ${params.business || ""}</p>
+        <p><strong>Submitted on:</strong> ${params.timestamp || ""}</p>
+      `;
 
       document.getElementById("year").textContent = new Date().getFullYear();
       document.getElementById("lastModified").textContent = document.lastModified;
@@ -74,4 +73,5 @@
   </script>
 </body>
 </html>
+
 
