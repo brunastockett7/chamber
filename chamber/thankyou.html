@@ -49,7 +49,7 @@
     .split("&")
     .forEach(pair => {
       const [key, value] = pair.split("=");
-      params[key] = decodeURIComponent(value.replace(/\+/g, " "));
+      params[key] = decodeURIComponent((value || "").replace(/\+/g, " "));
     });
   return params;
 }
