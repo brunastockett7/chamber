@@ -585,3 +585,13 @@ nav a[href="thankyou.html"] {
   flex: 1 1 250px;
   text-align: center;
 }
+
+.downtown img {
+  width: 100%;
+  max-height: 390px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
