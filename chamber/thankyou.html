@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Thank You - Minot Chamber</title>
-  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <header>
-    <img src="../images/minot-logo.jpg" alt="Minot Chamber Logo" class="logo" />
+    <img src="../images/minot-logo.jpg" alt="Minot Chamber Logo" class="logo">
     <h1>Minot Chamber of Commerce</h1>
     <nav>
       <ul>
@@ -41,7 +41,6 @@
   </footer>
 
   <script>
-    // Function to get URL parameters safely
     function getQueryParams() {
       const params = {};
       window.location.search
@@ -57,7 +56,7 @@
     document.addEventListener("DOMContentLoaded", () => {
       const params = getQueryParams();
       const infoDiv = document.getElementById("submitted-info");
-      
+
       infoDiv.innerHTML = `
         <p><strong>First Name:</strong> ${params.firstName || ""}</p>
         <p><strong>Last Name:</strong> ${params.lastName || ""}</p>
@@ -73,5 +72,6 @@
   </script>
 </body>
 </html>
+
 
 

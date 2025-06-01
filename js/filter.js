@@ -1,6 +1,6 @@
 /* eslint-env browser */
+/* global document */
 
-/* global document, fetch, console */
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('jobSearch');
   const filterSelect = document.getElementById('jobFilter');
@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  searchInput.addEventListener('input', filterJobs);
-  filterSelect.addEventListener('change', filterJobs);
+  if (searchInput && filterSelect && jobCards.length > 0) {
+    searchInput.addEventListener('input', filterJobs);
+    filterSelect.addEventListener('change', filterJobs);
+  }
 });
