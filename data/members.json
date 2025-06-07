@@ -4,7 +4,7 @@
     "address": "123 Main St, Minot, ND",
     "phone": "(701) 555-1234",
     "website": "https://www.minotsdailybread.com/",
-    "image": "/wdd231/images/daily-bread.webp",
+    "image": "images/daily-bread.webp",
     "membershipLevel": 3,
     "membership": "Gold"
   },
@@ -13,7 +13,7 @@
     "address": "456 Oak Ave, Minot, ND",
     "phone": "(701) 555-5678",
     "website": "https://www.bing.com/search?q=north+plains+fitness",
-    "image": "/wdd231/images/fitness.webp",
+    "image": "images/fitness.webp",
     "membershipLevel": 2,
     "membership": "Silver"
   },
@@ -22,7 +22,7 @@
     "address": "789 Tech Blvd, Minot, ND",
     "phone": "(701) 555-9012",
     "website": "",
-    "image": "/wdd231/images/dakota-tech.webp",
+    "image": "images/dakota-tech.webp",
     "membershipLevel": 1,
     "membership": "Bronze"
   },
@@ -31,7 +31,7 @@
     "address": "321 Garden St, Minot, ND",
     "phone": "(701) 555-3456",
     "website": "",
-    "image": "/wdd231/images/greenleaf.webp",
+    "image": "images/greenleaf.webp",
     "membershipLevel": 2,
     "membership": "Silver"
   },
@@ -40,7 +40,7 @@
     "address": "654 Harmony Rd, Minot, ND",
     "phone": "(701) 555-7890",
     "website": "https://www.bing.com/search?q=grace+studio+minot+nd",
-    "image": "/wdd231/images/grace-studio.webp",
+    "image": "images/grace-studio.webp",
     "membershipLevel": 3,
     "membership": "Gold"
   },
@@ -49,7 +49,7 @@
     "address": "888 Auto Ln, Minot, ND",
     "phone": "(701) 555-2468",
     "website": "https://carcareexpressanddavesdiesel.com/",
-    "image": "/wdd231/images/car-care.webp",
+    "image": "images/car-care.webp",
     "membershipLevel": 1,
     "membership": "Bronze"
   },
@@ -58,8 +58,9 @@
     "address": "999 Flower Blvd, Minot, ND",
     "phone": "(701) 555-6789",
     "website": "",
-    "image": "/wdd231/images/studio-bloom.webp",
+    "image": "images/studio-bloom.webp",
     "membershipLevel": 2,
     "membership": "Silver"
   }
 ]
+
