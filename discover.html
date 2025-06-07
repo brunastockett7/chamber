@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Discover - Minot Chamber</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <img src="images/minot-logo.jpg" alt="Minot Chamber Logo" class="logo" />
+    <img src="images/minot-logo.jpg" alt="Minot Chamber Logo" class="logo">
     <h1>Minot Chamber of Commerce</h1>
     <nav>
       <ul aria-label="Main site navigation">
@@ -39,15 +39,15 @@
       <h2>Popular Places</h2>
       <div class="gallery-row">
         <figure>
-          <img src="images/minot-air-show.jpg" alt="Minot Air Show" loading="lazy" />
+          <img src="images/minot-air-show.jpg" alt="Minot Air Show" loading="lazy">
           <figcaption>Exciting aerial displays during Minot’s air show.</figcaption>
         </figure>
         <figure>
-          <img src="images/oak-park.jpg" alt="Oak Park" loading="lazy" />
+          <img src="images/oak-park.jpg" alt="Oak Park" loading="lazy">
           <figcaption>Relax and unwind in the calm of Oak Park.</figcaption>
         </figure>
         <figure>
-          <img src="images/scandinavian-park.jpg" alt="Scandinavian Park" loading="lazy" />
+          <img src="images/scandinavian-park.jpg" alt="Scandinavian Park" loading="lazy">
           <figcaption>Explore Minot’s Scandinavian roots at this cultural site.</figcaption>
         </figure>
       </div>
@@ -81,7 +81,7 @@
     </section>
 
     <section class="things-to-do centered">
-      <img src="images/things.webp" alt="Things to Do in Minot" class="things-banner-img" />
+      <img src="images/things.webp" alt="Things to Do in Minot" class="things-banner-img">
       <h2>Things to Do in Minot</h2>
       <p>
         Discover more events, attractions, and entertainment options at
@@ -91,7 +91,6 @@
       </p>
     </section>
 
-    <!-- ✅ Dynamic Cards Section -->
     <section class="card-area">
       <h2>Explore More in Minot</h2>
       <div class="card-container"></div>
@@ -113,7 +112,7 @@
         const data = await response.json();
         const weather = data.current_weather;
         weatherDiv.innerHTML = `
-          <p>Temperature: ${weather.temperature}°C</p>
+          <p>Temperature: ${weather.temperature}&deg;C</p>
           <p>Wind Speed: ${weather.windspeed} km/h</p>
           <p>Weather Code: ${weather.weathercode}</p>
           <p>Time: ${new Date(weather.time).toLocaleString()}</p>
@@ -128,7 +127,6 @@
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
 
-    // ✅ Load JSON cards
     fetch("data/discover.json")
       .then(res => res.json())
       .then(data => {
@@ -140,7 +138,7 @@
           card.innerHTML = `
             <h3>${item.title}</h3>
             <figure>
-              <img src="${item.image}" alt="${item.title}" loading="lazy" />
+              <img src="${item.image}" alt="${item.title}" loading="lazy">
             </figure>
             <address>${item.address}</address>
             <p>${item.description}</p>
@@ -150,7 +148,6 @@
         });
       });
 
-    // ✅ localStorage welcome message
     const msgBox = document.getElementById("visit-message");
     const lastVisit = localStorage.getItem("lastVisit");
     const now = Date.now();
@@ -168,4 +165,3 @@
   </script>
 </body>
 </html>
-
