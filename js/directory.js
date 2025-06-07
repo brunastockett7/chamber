@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.setAttribute('tabindex', '0');
       card.setAttribute('aria-label', `${member.name}, ${membershipName} Member`);
 
-      // Image (✅ FIXED to handle path issues)
+      // Image
       const img = document.createElement('img');
       img.src = member.image.startsWith('/wdd231/')
         ? member.image.replace('/wdd231/', '')
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!container) return;
 
     try {
-      const response = await fetch('../data/members.json');
+      const response = await fetch('data/members.json'); // ✅ Correct path
       if (!response.ok) throw new Error('Failed to fetch member data');
       const data = await response.json();
       displayMembers(data);
