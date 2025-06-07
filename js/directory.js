@@ -38,9 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
       card.setAttribute('tabindex', '0');
       card.setAttribute('aria-label', `${member.name}, ${membershipName} Member`);
 
-      // Image
+      // Image (✅ FIXED to handle path issues)
       const img = document.createElement('img');
-      img.src = member.image;
+      img.src = member.image.startsWith('/wdd231/')
+        ? member.image.replace('/wdd231/', '')
+        : member.image;
       img.alt = `Logo of ${member.name}`;
       img.loading = 'lazy';
 
