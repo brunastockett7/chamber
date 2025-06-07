@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Discover - Minot Chamber</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <header>
-    <img src="../images/minot-logo.jpg" alt="Minot Chamber Logo" class="logo">
+    <img src="images/minot-logo.jpg" alt="Minot Chamber Logo" class="logo" />
     <h1>Minot Chamber of Commerce</h1>
     <nav>
       <ul aria-label="Main site navigation">
-        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="discover.html" class="active">Discover</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
-        <li><a href="marketplace.html" class="active">Marketplace</a></li>
+        <li><a href="marketplace.html">Marketplace</a></li>
         <li><a href="thankyou.html">Thank You</a></li>
       </ul>
     </nav>
@@ -39,15 +39,15 @@
       <h2>Popular Places</h2>
       <div class="gallery-row">
         <figure>
-          <img src="../images/minot-air-show.jpg" alt="Minot Air Show" loading="lazy">
+          <img src="images/minot-air-show.jpg" alt="Minot Air Show" loading="lazy" />
           <figcaption>Exciting aerial displays during Minot’s air show.</figcaption>
         </figure>
         <figure>
-          <img src="../images/oak-park.jpg" alt="Oak Park" loading="lazy">
+          <img src="images/oak-park.jpg" alt="Oak Park" loading="lazy" />
           <figcaption>Relax and unwind in the calm of Oak Park.</figcaption>
         </figure>
         <figure>
-          <img src="../images/scandinavian-park.jpg" alt="Scandinavian Park" loading="lazy">
+          <img src="images/scandinavian-park.jpg" alt="Scandinavian Park" loading="lazy" />
           <figcaption>Explore Minot’s Scandinavian roots at this cultural site.</figcaption>
         </figure>
       </div>
@@ -63,8 +63,8 @@
     <section class="cost-of-living centered">
       <h2>Cost of Living</h2>
       <p>
-        Curious about living costs in Minot? 
-        <a href="https://www.bestplaces.net/cost_of_living/city/north_dakota/minot" target="_blank" rel="noopener">Click here</a> 
+        Curious about living costs in Minot?
+        <a href="https://www.bestplaces.net/cost_of_living/city/north_dakota/minot" target="_blank" rel="noopener">Click here</a>
         to explore housing prices, utilities, groceries, and more.
       </p>
       <p>
@@ -75,23 +75,23 @@
     <section class="local-news centered">
       <h2>Local News</h2>
       <p>
-        Stay up to date with Minot news and events by visiting 
+        Stay up to date with Minot news and events by visiting
         <a href="https://www.kfyrtv.com/" target="_blank" rel="noopener">KFYR-TV Minot News</a>.
       </p>
     </section>
 
     <section class="things-to-do centered">
-      <img src="../images/things.webp" alt="Things to Do in Minot" class="things-banner-img">
+      <img src="images/things.webp" alt="Things to Do in Minot" class="things-banner-img" />
       <h2>Things to Do in Minot</h2>
       <p>
-        Discover more events, attractions, and entertainment options at 
+        Discover more events, attractions, and entertainment options at
         <a href="https://visitminot.org/things-to-do/" target="_blank" rel="noopener">
           VisitMinot.org
         </a>.
       </p>
     </section>
 
-    <!-- ✅ NEW SECTION: Dynamic Cards from JSON -->
+    <!-- ✅ Dynamic Cards Section -->
     <section class="card-area">
       <h2>Explore More in Minot</h2>
       <div class="card-container"></div>
@@ -105,12 +105,11 @@
   </footer>
 
   <script>
-    // ✅ Existing Weather Fetch
     async function fetchWeather() {
-      const weatherDiv = document.getElementById('weatherData');
+      const weatherDiv = document.getElementById("weatherData");
       try {
-        const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=48.2325&longitude=-101.2963&current_weather=true');
-        if (!response.ok) throw new Error('Weather fetch failed');
+        const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.2325&longitude=-101.2963&current_weather=true");
+        if (!response.ok) throw new Error("Weather fetch failed");
         const data = await response.json();
         const weather = data.current_weather;
         weatherDiv.innerHTML = `
@@ -120,7 +119,7 @@
           <p>Time: ${new Date(weather.time).toLocaleString()}</p>
         `;
       } catch (error) {
-        weatherDiv.textContent = 'Unable to load weather data.';
+        weatherDiv.textContent = "Unable to load weather data.";
         console.error(error);
       }
     }
@@ -129,8 +128,8 @@
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
 
-    // ✅ NEW: Load 8 location cards from JSON
-    fetch("../data/discover.json")
+    // ✅ Load JSON cards
+    fetch("data/discover.json")
       .then(res => res.json())
       .then(data => {
         const container = document.querySelector(".card-container");
@@ -141,7 +140,7 @@
           card.innerHTML = `
             <h3>${item.title}</h3>
             <figure>
-              <img src="${item.image}" alt="${item.title}" loading="lazy">
+              <img src="${item.image}" alt="${item.title}" loading="lazy" />
             </figure>
             <address>${item.address}</address>
             <p>${item.description}</p>
@@ -151,7 +150,7 @@
         });
       });
 
-    // ✅ NEW: LocalStorage Visit Message
+    // ✅ localStorage welcome message
     const msgBox = document.getElementById("visit-message");
     const lastVisit = localStorage.getItem("lastVisit");
     const now = Date.now();
