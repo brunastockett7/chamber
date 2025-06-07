@@ -595,3 +595,102 @@ nav a[href="thankyou.html"] {
   display: block;
   margin: 0 auto;
 }
+/* ====== Discover Page Card Layout ====== */
+.card-container {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Default (Mobile First) - 1 Column */
+.card-container {
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+/* Medium Screens (641px - 1024px) - 2 Columns */
+@media (min-width: 641px) {
+  .card-container {
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+
+  /* Image hover effect ONLY for medium+ */
+  .info-card img:hover {
+    transform: scale(1.05);
+    filter: brightness(110%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+}
+
+/* Large Screens (1025px+) - 3 Columns */
+@media (min-width: 1025px) {
+  .card-container {
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 card5 card6"
+      "card7 card8 card8";
+  }
+}
+
+/* Assign named grid areas to each card */
+.card-container section:nth-child(1) { grid-area: card1; }
+.card-container section:nth-child(2) { grid-area: card2; }
+.card-container section:nth-child(3) { grid-area: card3; }
+.card-container section:nth-child(4) { grid-area: card4; }
+.card-container section:nth-child(5) { grid-area: card5; }
+.card-container section:nth-child(6) { grid-area: card6; }
+.card-container section:nth-child(7) { grid-area: card7; }
+.card-container section:nth-child(8) { grid-area: card8; }
+
+/* ====== Card Styling ====== */
+.info-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.info-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Learn More Button */
+.info-card button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.info-card button:hover {
+  background-color: #222;
+}
+
+/* ====== Visit Message Styling ====== */
+.visit-message {
+  font-style: italic;
+  color: #333;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}

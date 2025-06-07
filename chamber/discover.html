@@ -90,6 +90,13 @@
         </a>.
       </p>
     </section>
+
+    <!-- ✅ NEW SECTION: Dynamic Cards from JSON -->
+    <section class="card-area">
+      <h2>Explore More in Minot</h2>
+      <div class="card-container"></div>
+      <div id="visit-message" class="visit-message"></div>
+    </section>
   </main>
 
   <footer>
@@ -98,6 +105,7 @@
   </footer>
 
   <script>
+    // ✅ Existing Weather Fetch
     async function fetchWeather() {
       const weatherDiv = document.getElementById('weatherData');
       try {
@@ -120,6 +128,45 @@
     fetchWeather();
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
+
+    // ✅ NEW: Load 8 location cards from JSON
+    fetch("../data/discover.json")
+      .then(res => res.json())
+      .then(data => {
+        const container = document.querySelector(".card-container");
+        data.forEach((item, index) => {
+          const card = document.createElement("section");
+          card.classList.add("info-card");
+          card.style.gridArea = `card${index + 1}`;
+          card.innerHTML = `
+            <h3>${item.title}</h3>
+            <figure>
+              <img src="${item.image}" alt="${item.title}" loading="lazy">
+            </figure>
+            <address>${item.address}</address>
+            <p>${item.description}</p>
+            <button>Learn More</button>
+          `;
+          container.appendChild(card);
+        });
+      });
+
+    // ✅ NEW: LocalStorage Visit Message
+    const msgBox = document.getElementById("visit-message");
+    const lastVisit = localStorage.getItem("lastVisit");
+    const now = Date.now();
+
+    if (!lastVisit) {
+      msgBox.textContent = "Welcome! Let us know if you have any questions.";
+    } else {
+      const days = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+      msgBox.textContent = days < 1
+        ? "Back so soon! Awesome!"
+        : `You last visited ${days} ${days === 1 ? "day" : "days"} ago.`;
+    }
+
+    localStorage.setItem("lastVisit", now);
   </script>
 </body>
 </html>
+

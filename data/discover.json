@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Roosevelt Park Zoo",
+    "image": "../images/zoo.webp",
+    "address": "1219 Burdick Expy E, Minot, ND",
+    "description": "A family-friendly zoo with a variety of animals and interactive exhibits."
+  },
+  {
+    "title": "Dakota Square Mall",
+    "image": "../images/dakota-mall.webp",
+    "address": "2400 10th St SW, Minot, ND",
+    "description": "Minot's largest shopping center with stores, a food court, and movie theater."
+  },
+  {
+    "title": "Taube Museum of Art",
+    "image": "../images/minot-downtown.webp",
+    "address": "2 Main St N, Minot, ND",
+    "description": "Gallery showcasing local and regional art with rotating exhibits and events."
+  },
+  {
+    "title": "Minot Public Library",
+    "image": "../images/minot-library.webp",
+    "address": "516 2nd Ave SW, Minot, ND",
+    "description": "Community library offering books, tech access, and family-friendly programs."
+  },
+  {
+    "title": "Trinity Health Hospital",
+    "image": "../images/trinity.webp",
+    "address": "2305 37th Ave SW, Minot, ND",
+    "description": "A leading regional hospital providing comprehensive healthcare services."
+  },
+  {
+    "title": "Hess Oil and Gas",
+    "image": "../images/hess.webp",
+    "address": "1121 W Dakota Pkwy, Williston, ND",
+    "description": "Major energy company operating in the Bakken region with offices in Minot."
+  },
+  {
+    "title": "Town & Country Credit Union",
+    "image": "../images/town-country.webp",
+    "address": "615 S Broadway, Minot, ND",
+    "description": "A local credit union offering banking, loans, and financial services to the Minot community."
+  },
+  {
+    "title": "X-energy",
+    "image": "../images/xenergy.webp",
+    "address": "Energy Campus, Minot, ND",
+    "description": "An advanced nuclear energy company bringing innovative solutions to the Minot region."
+  }
+]
