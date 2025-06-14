@@ -774,11 +774,15 @@ nav a[href="thankyou.html"] {
   color: black;
   text-decoration: none;
 }
-/* === FEATURED MEMBERS === */
 .spotlight-card img {
-  width: 100%;        /* Ensure images are responsive */
-  height: 250px;      /* Set a fixed height */
-  object-fit: cover;  /* Ensures the images are cropped to fit */
-  border-radius: 10px;
+  width: 100%;              /* Make images responsive */
+  height: 250px;            /* Set the same height */
+  object-fit: cover;        /* Ensure they fill the box without stretching */
+  border-radius: 10px;      /* Keep rounded corners */
+}
+.spotlight-card {
+  width: 250px;  /* Set width to ensure cards are the same */
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
