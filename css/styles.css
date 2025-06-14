@@ -775,8 +775,10 @@ nav a[href="thankyou.html"] {
   text-decoration: none;
 }
 .static-item img {
-  width: 200px;  /* Adjust the width as needed */
-  height: 200px; /* Adjust the height to match the width */
-  object-fit: cover; /* Ensures the image maintains its aspect ratio while filling the space */
+  width: 200px;  /* Adjust width to a fixed size */
+  height: 200px; /* Adjust height to match the width */
+  object-fit: cover; /* Ensures the image maintains its aspect ratio */
   border-radius: 10px; /* Optional: Adds rounded corners */
+  display: block; /* Makes sure the image is treated as a block element */
+  margin: 0 auto; /* Centers the images horizontally */
 }
