@@ -805,3 +805,27 @@ nav a[href="thankyou.html"] {
   font-size: 1em;
   color: #666;
 }
+/* Styles for the static items (Grace Studio, North Plains, Daily Bakery) */
+.static-items {
+  display: flex;
+  flex-direction: column;  /* Arrange these items vertically */
+  gap: 20px;  /* Adds space between the items */
+  margin-top: 30px;  /* Adds space between sections */
+  text-align: center;
+}
+
+.static-item {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.static-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.static-item p {
+  font-size: 1em;
+  color: #666;
+}
