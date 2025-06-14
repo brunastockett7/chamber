@@ -776,11 +776,12 @@ nav a[href="thankyou.html"] {
 }
 /* Hamburger Menu */
 .hamburger-menu {
-  display: none; /* Hidden by default */
+  display: none;
   cursor: pointer;
-  font-size: 30px;
-  color: #3A8B87; /* Color of the hamburger icon */
+  font-size: 24px;
+  color: #fff;
 }
+
 /* Navigation Menu */
 #nav-list {
   display: flex;
