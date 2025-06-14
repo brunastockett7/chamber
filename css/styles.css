@@ -774,3 +774,34 @@ nav a[href="thankyou.html"] {
   color: black;
   text-decoration: none;
 }
+/* Styles for the spotlight section */
+.spotlight-section {
+  display: flex;
+  flex-wrap: wrap;  /* Allows items to wrap if there's not enough space */
+  gap: 20px;  /* Adds spacing between items */
+  justify-content: center;  /* Centers the items horizontally */
+}
+
+.item-card {
+  width: 250px;  /* Set a fixed width for each item */
+  text-align: center;
+  border: 1px solid #ddd;  /* Optional: adds a border around the cards */
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.item-card img {
+  width: 100%;  /* Ensures the images are responsive */
+  height: 250px;  /* Set a fixed height to make images the same size */
+  object-fit: cover;  /* Ensures the images maintain their aspect ratio */
+}
+
+.item-card h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.item-card p {
+  font-size: 1em;
+  color: #666;
+}
