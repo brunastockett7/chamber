@@ -805,27 +805,46 @@ nav a[href="thankyou.html"] {
   font-size: 1em;
   color: #666;
 }
-/* Styles for the static items (Grace Studio, North Plains, Daily Bakery) */
+/* Add this CSS for centering the static items vertically and ensuring they stay in the same layout */
+
+#spotlight {
+  margin-bottom: 50px; /* Adds some spacing between the spotlight section and the static items */
+}
+
+/* Flexbox layout for the static items */
 .static-items {
   display: flex;
-  flex-direction: column;  /* Arrange these items vertically */
-  gap: 20px;  /* Adds space between the items */
-  margin-top: 30px;  /* Adds space between sections */
-  text-align: center;
+  flex-direction: column; /* Keep items stacked vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 20px; /* Adds space between the items */
+  margin-top: 20px; /* Optional: space from the spotlight section */
+  justify-content: center; /* Ensures vertical centering */
 }
 
 .static-item {
   background-color: #f9f9f9;
-  padding: 15px;
-  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .static-item h3 {
-  font-size: 1.5em;
+  font-size: 1.3rem;
+  color: #3A8B87;
   margin-bottom: 10px;
 }
 
 .static-item p {
-  font-size: 1em;
+  font-size: 1rem;
   color: #666;
+}
+
+.static-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
