@@ -774,26 +774,10 @@ nav a[href="thankyou.html"] {
   color: black;
   text-decoration: none;
 }
-/* Ensure uniform image sizes for spotlight cards */
+/* Ensures all images in the Spotlight section are the same size */
 .spotlight-card img {
-  width: 100%;             /* Make the image take up the full width of its container */
-  height: 250px;           /* Fix the height to ensure all images are the same size */
-  object-fit: cover;       /* Maintain aspect ratio and crop images to fit */
-  border-radius: 10px;     /* Rounded corners */
-}
-
-/* Make sure the spotlight card containers are consistent */
-.spotlight-card {
-  width: 250px;            /* Fixed width for all spotlight cards */
-  text-align: center;      /* Center the content */
-  margin: 1rem auto;       /* Space between the cards */
-}
-
-/* Ensure the spotlight section aligns and spaces the cards properly */
-.spotlight-section {
-  display: flex;
-  flex-wrap: wrap;          /* Allow cards to wrap on smaller screens */
-  gap: 1.5rem;              /* Add space between the cards */
-  justify-content: center;  /* Center the cards */
-  margin-top: 2rem;
+  width: 100%;           /* Make the image fill the container's width */
+  height: 250px;         /* Fix the height to make all images uniform */
+  object-fit: cover;     /* Ensures the image is cropped to fit the container */
+  border-radius: 10px;   /* Optional: Adds rounded corners */
 }
