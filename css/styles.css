@@ -781,42 +781,40 @@ nav a[href="thankyou.html"] {
   font-size: 30px;
   color: #3A8B87; /* Color of the hamburger icon */
 }
+/* Navigation Menu */
+#nav-list {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+}
 
-/* For mobile screens, display the hamburger menu */
+#nav-list li {
+  margin-right: 20px;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .hamburger-menu {
-    display: block; /* Show hamburger icon on smaller screens */
-  }
-
   #nav-list {
-    display: none; /* Hide the menu by default */
-    flex-direction: column; /* Stack the menu vertically */
+    display: none;
+    flex-direction: column;
     position: absolute;
     top: 60px;
-    background-color: #fff; /* White background for the menu */
-    width: 100%; /* Full width */
+    background-color: #333;
+    width: 100%;
     left: 0;
     padding: 10px 0;
   }
 
-  #nav-list.active {
-    display: flex; /* Show the menu when the hamburger is clicked */
-  }
-
   #nav-list li {
-    margin: 15px 0;
-    text-align: center;
-    font-size: 1.2rem;
+    margin: 10px 0;
   }
 
-  #nav-list a {
-    color: #3A8B87; /* Adjust link color */
-    padding: 10px;
-    text-decoration: none;
+  .hamburger-menu {
+    display: block;
   }
 
-  #nav-list a:hover {
-    background-color: #D9A273;
-    color: #fff;
+  /* Show the menu when 'active' class is added */
+  #nav-list.active {
+    display: flex;
   }
 }
