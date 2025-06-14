@@ -79,7 +79,6 @@ window.addEventListener('click', (e) => {
 
 // === Dynamic Featured Members or Spotlight ===
 const items = [
-const items = [
   { name: 'John Doe', description: 'CEO of Minot Chamber', image: 'image1.jpg' },
   { name: 'Jane Smith', description: 'Marketing Specialist', image: 'image2.jpg' },
   { name: 'David Brown', description: 'Event Coordinator', image: 'image3.jpg' },
@@ -96,7 +95,6 @@ const items = [
   { name: 'Anna Perez', description: 'Marketing Director', image: 'image14.jpg' },
   { name: 'James Johnson', description: 'Operations Lead', image: 'image15.jpg' }
 ];
-
 
 const itemList = document.getElementById('spotlight');
 items.forEach(item => {
