@@ -1,7 +1,7 @@
 
 /* === GLOBAL STYLES === */
 body {
-  background-color: #F5EFE6;
+  background-color: #B67A6A;
   color: #222222;
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -22,7 +22,7 @@ body {
 
 /* === HEADER STYLING === */
 header {
-  background-color: #F5EFE6;
+  background-color: #B67A6A;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -65,7 +65,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  background-color: #D9A273;
+  background-color: #641029;
   color: #fff;
 }
 
@@ -128,7 +128,7 @@ nav a.active {
 
 /* === DIRECTORY MEMBERS === */
 .member-card {
-  background-color: #ffffff;
+  background-color: #B67A6A;
   color: #222222;
   padding: 1rem;
   border-radius: 10px;
@@ -153,7 +153,7 @@ basic { border-left-color: #888888; }
 
 /* === WEATHER SECTION === */
 .weather {
-  background-color: #ffffff;
+  background-color: #B67A6A;
   color: #333333;
   padding: 2rem;
   margin-top: 2rem;
@@ -270,7 +270,7 @@ basic { border-left-color: #888888; }
 }
 /* === WEATHER SECTION === */
 .weather {
-  background-color: #ffffff;
+  background-color: #B67A6A;
   color: #333333;
   padding: 2rem;
   margin-top: 2rem;
@@ -289,7 +289,7 @@ basic { border-left-color: #888888; }
 
 /* === SPOTLIGHT SECTION === */
 .spotlight {
-  background-color: #ffffff;
+  background-color: #B67A6A;
   padding: 2rem;
   max-width: 900px;
   margin: 2rem auto;
@@ -396,7 +396,7 @@ basic { border-left-color: #888888; }
 }
 
 .global-social-icons a:hover {
-  color: #D9A273;
+  color: #B67A6A;
 }
 .job-logo {
   width: 60px;
