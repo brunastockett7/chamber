@@ -774,11 +774,11 @@ nav a[href="thankyou.html"] {
   color: black;
   text-decoration: none;
 }
-.static-item img {
-  width: 200px;  /* Adjust width to a fixed size */
-  height: 200px; /* Adjust height to match the width */
-  object-fit: cover; /* Ensures the image maintains its aspect ratio */
-  border-radius: 10px; /* Optional: Adds rounded corners */
-  display: block; /* Makes sure the image is treated as a block element */
-  margin: 0 auto; /* Centers the images horizontally */
+/* === FEATURED MEMBERS === */
+.spotlight-card img {
+  width: 100%;        /* Ensure images are responsive */
+  height: 250px;      /* Set a fixed height */
+  object-fit: cover;  /* Ensures the images are cropped to fit */
+  border-radius: 10px;
 }
+
