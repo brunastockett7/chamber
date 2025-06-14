@@ -18,11 +18,16 @@
     <a href="https://twitter.com" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
   </div>
 
+  <!-- Hamburger Menu -->
+  <div class="hamburger-menu" id="hamburger-menu">
+    <i class="fas fa-bars"></i>
+  </div>
+
   <header>
     <img src="images/minot-logo.jpg" alt="Minot Chamber Logo" class="logo">
     <h1>Minot Chamber of Commerce</h1>
     <nav>
-      <ul>
+      <ul id="nav-list">
         <li><a href="../index.html" class="active">Home</a></li>
         <li><a href="discover.html">Discover</a></li>
         <li><a href="directory.html">Directory</a></li>
@@ -34,6 +39,9 @@
   </header>
 
   <main>
+    <!-- Add the welcome message here -->
+    <h2 id="welcome-message">Welcome to the Minot Chamber of Commerce! We're glad you're here.</h2>
+
     <section class="hero">
       <img src="images/minot-downtown.webp" alt="Minot Downtown" class="hero-img">
       <div class="hero-text">
@@ -98,16 +106,6 @@
       </div>
     </section>
 
-    <section class="courses">
-      <h2>My Course List</h2>
-      <div class="filters">
-        <button class="filter-btn" data-subject="Major">Major</button>
-        <button class="filter-btn" data-subject="General">General</button>
-        <button class="filter-btn" data-subject="Elective">Elective</button>
-      </div>
-      <div id="course-list" class="course-list horizontal"></div>
-      <p><strong>Total Credits:</strong> <span id="credit-total" aria-live="polite">0</span></p>
-    </section>
   </main>
 
   <footer>
@@ -116,9 +114,20 @@
 
   <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="top-btn" aria-label="Scroll to top">↑ Top</button>
 
-  <script src="js/courses.js"></script>
+  <!-- Modal HTML goes here -->
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Important Message</h2>
+      <p>This is a modal dialog box.</p>
+    </div>
+  </div>
+
+  <!-- Button to trigger the modal -->
+  <button id="openModalBtn">Open Modal</button>
+
   <script src="js/script.js"></script>
   <script src="js/weather.js"></script>
 </body>
 </html>
-
