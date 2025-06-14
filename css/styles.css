@@ -774,12 +774,49 @@ nav a[href="thankyou.html"] {
   color: black;
   text-decoration: none;
 }
-/* Ensure all images in the spotlight section are the same size */
-.spotlight-card img {
-  width: 200px;          /* Set a fixed width */
-  height: 200px;         /* Set a fixed height */
-  object-fit: cover;     /* Ensure the image maintains its aspect ratio */
-  border-radius: 10px;   /* Optional: Adds rounded corners */
-  display: block;        /* Ensures the image is treated as a block element */
-  margin: 0 auto;        /* Centers the images horizontally */
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  font-size: 30px;
+  color: #3A8B87; /* Color of the hamburger icon */
+}
+
+/* For mobile screens, display the hamburger menu */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block; /* Show hamburger icon on smaller screens */
+  }
+
+  #nav-list {
+    display: none; /* Hide the menu by default */
+    flex-direction: column; /* Stack the menu vertically */
+    position: absolute;
+    top: 60px;
+    background-color: #fff; /* White background for the menu */
+    width: 100%; /* Full width */
+    left: 0;
+    padding: 10px 0;
+  }
+
+  #nav-list.active {
+    display: flex; /* Show the menu when the hamburger is clicked */
+  }
+
+  #nav-list li {
+    margin: 15px 0;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  #nav-list a {
+    color: #3A8B87; /* Adjust link color */
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  #nav-list a:hover {
+    background-color: #D9A273;
+    color: #fff;
+  }
 }
