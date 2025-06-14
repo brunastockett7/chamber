@@ -774,3 +774,9 @@ nav a[href="thankyou.html"] {
   color: black;
   text-decoration: none;
 }
+.static-item img {
+  width: 200px;  /* Adjust the width as needed */
+  height: 200px; /* Adjust the height to match the width */
+  object-fit: cover; /* Ensures the image maintains its aspect ratio while filling the space */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
