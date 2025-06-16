@@ -1,6 +1,6 @@
 /* === GLOBAL STYLES === */
 body {
-  background-color: #D4E4D2;
+  background-color: #d4e4d2;
   color: #222222;
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -21,7 +21,7 @@ body {
 
 /* === HEADER STYLING === */
 header {
-  background-color: #B8E0D2;
+  background-color: #d4e4d2;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -127,7 +127,7 @@ nav a.active {
 
 /* === DIRECTORY MEMBERS === */
 .member-card {
-  background-color: #B8E0D2;
+  background-color: #d4e4d2;
   color: #222222;
   padding: 1rem;
   border-radius: 10px;
@@ -152,7 +152,7 @@ basic { border-left-color: #888888; }
 
 /* === WEATHER SECTION === */
 .weather {
-  background-color: #B8E0D2;
+  background-color: #D4e4d2;
   color: #333333;
   padding: 2rem;
   margin-top: 2rem;
