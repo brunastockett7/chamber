@@ -18,16 +18,11 @@
     <a href="https://twitter.com" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
   </div>
 
-  <!-- Hamburger Menu -->
-  <div class="hamburger-menu" id="hamburger-menu">
-    <i class="fas fa-bars"></i> <!-- FontAwesome Icon for Hamburger -->
-  </div>
-
   <header>
     <img src="images/minot-logo.jpg" alt="Minot Chamber Logo" class="logo">
     <h1>Minot Chamber of Commerce</h1>
     <nav>
-      <ul id="nav-list">
+      <ul>
         <li><a href="../index.html" class="active">Home</a></li>
         <li><a href="discover.html">Discover</a></li>
         <li><a href="directory.html">Directory</a></li>
@@ -39,9 +34,6 @@
   </header>
 
   <main>
-    <!-- Add the welcome message here -->
-    <h2 id="welcome-message">Welcome to the Minot Chamber of Commerce! We're glad you're here.</h2>
-
     <section class="hero">
       <img src="images/minot-downtown.webp" alt="Minot Downtown" class="hero-img">
       <div class="hero-text">
@@ -98,28 +90,23 @@
       <h2>Featured Members</h2>
       <!-- Spotlight cards will be injected here by JS -->
     </section>
+
+    <section class="weather" aria-live="polite">
+      <h2>Current Weather</h2>
+      <div id="weatherData">
+        <p>Loading weather information...</p>
+      </div>
+    </section>
+
   </main>
+
   <footer>
     <p>&copy; <span id="year"></span> Minot Chamber of Commerce | Last Modified: <span id="lastModified"></span></p>
   </footer>
 
   <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="top-btn" aria-label="Scroll to top">↑ Top</button>
 
-  <!-- Modal HTML goes here -->
-  <!-- Modal -->
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn">&times;</span>
-      <h2>Important Message</h2>
-      <p>This is a modal dialog box.</p>
-    </div>
-  </div>
-
-  <!-- Button to trigger the modal -->
-  <button id="openModalBtn">Open Modal</button>
-
   <script src="js/script.js"></script>
   <script src="js/weather.js"></script>
 </body>
 </html>
-
